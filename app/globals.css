@@ -31,7 +31,6 @@ html {
 
 section[id] {
   scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 @media (prefers-reduced-motion: reduce) {
