@@ -68,7 +68,7 @@ export default function Contato() {
         >
           Pronto para{" "}
           <span className="bg-gradient-to-r from-[#D4A017] to-[#F5C842] bg-clip-text text-transparent">
-            decolar
+            explorar novos horizontes
           </span>{" "}
           conosco?
         </h2>

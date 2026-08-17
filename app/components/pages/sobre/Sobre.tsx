@@ -1,5 +1,5 @@
 import Image from "next/image";
-import equipeImg from "@/public/equipe.jpg";
+import logoImg from "@/public/Logo_dourada_roxa_dark.png";
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
@@ -21,17 +21,17 @@ export default function Sobre() {
   return (
     <section
       id="sobre"
-      className="relative flex min-h-screen w-full items-center overflow-hidden text-white"
+      className="relative flex min-h-screen w-full items-center overflow-hidden bg-black text-white"
     >
-      {/* Foto de fundo — limpa, sem gradiente */}
+      {/* Logo da equipe como plano de fundo */}
       <Image
-        src={equipeImg}
-        alt="Equipe Ares Rovers reunida na UnB"
-        fill
-        className="object-cover object-[center_70%]"
+        src={logoImg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[85vw] w-[85vw] max-h-[640px] max-w-[640px] -translate-x-1/2 -translate-y-1/2 md:left-[28%] md:h-[70vh] md:w-[70vh]"
       />
 
-      {/* Acento roxo sutil sobre a foto */}
+      {/* Acento roxo sutil sobre o fundo */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_85%,rgba(76,29,149,0.3),transparent_55%)]" />
 
       {/* Painel de texto:
@@ -54,24 +54,27 @@ export default function Sobre() {
             className="mt-4 text-4xl uppercase leading-tight sm:text-5xl lg:text-[3.25rem]"
             style={{ fontFamily: "var(--font-russo-one)" }}
           >
-            Engenharia que{" "}
-            <span className="text-[#4c1d95]">conquista</span> outros mundos
+            Engenharia que <span className="text-[#4c1d95]">conquista</span>{" "}
+            outros mundos
           </h2>
           <p className="mt-6 text-base leading-relaxed text-white/75 sm:text-lg">
             A ARES (Aerospace Rover Exploration System) é a equipe oficial de
             Rovers da Universidade de Brasília, vinculada à Engenharia
-            Aeroespacial da UnB. Nosso objetivo é desenvolver veículos
-            robóticos capazes de operar em terrenos análogos a superfícies
+            Aeroespacial da UnB. Nosso objetivo é desenvolver veículos robóticos
+            capazes de operar em terrenos análogos a superfícies
             extraterrestres.
           </p>
           <p className="mt-4 text-base leading-relaxed text-white/75 sm:text-lg">
-            Atuamos de forma multidisciplinar nas áreas de estruturas,
-            dinâmica, eletrônica, telecomunicações e sistemas embarcados,
-            integrando ensino, pesquisa e inovação aplicada.
+            Atuamos de forma multidisciplinar nas áreas de{" "}
+            <span className="font-bold">
+              Controle e Comunicação, Dinâmica, Elétrica, Estruturas, Financeiro
+              e Relações Públicas
+            </span>
+            , integrando ensino, pesquisa e inovação aplicada.
           </p>
 
           <dl className="mt-8 grid grid-cols-3 gap-6 border-t border-white/15 pt-6">
-            <Stat value="5+" label="Subsistemas" />
+            <Stat value="6" label="Subsistemas" />
             <Stat value="30+" label="Membros" />
             <Stat value="∞" label="Ambições" />
           </dl>

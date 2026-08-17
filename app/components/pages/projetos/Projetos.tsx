@@ -1,33 +1,39 @@
 const subsistemas = [
   {
+    sigla: "CC",
+    nome: "Controle e Comunicação",
+    descricao:
+      "Implementar sistemas para o controle do rover e recepção de dados coletados a distância por meio de: Antenas, Bus Servos, Sensores, Co-processadores, e controle remoto por ROS.",
+  },
+  {
+    sigla: "DIN",
+    nome: "Dinâmica",
+    descricao:
+      "Projetar soluções para a locomoção do rover, desenvolvendo design, posições estratégicas, e manobrabilidade do veículo.",
+  },
+  {
+    sigla: "ELE",
+    nome: "Elétrica",
+    descricao:
+      "Circuitos embarcados, sensores e atuadores que controlam os sistemas do rover em tempo real.",
+  },
+  {
     sigla: "STR",
     nome: "Estruturas",
     descricao:
       "Chassi e sistemas mecânicos projetados para terrenos irregulares análogos a superfícies planetárias.",
   },
   {
-    sigla: "ELE",
-    nome: "Eletrônica",
+    sigla: "FIN",
+    nome: "Financeiro",
     descricao:
-      "Circuitos embarcados, sensores e atuadores que controlam os sistemas do rover em tempo real.",
+      "Gerenciar o orçamento do projeto, captação de recursos e parcerias, além de organizar o projeto para cumprir com a documentação das competições.",
   },
   {
-    sigla: "SW",
-    nome: "Software",
+    sigla: "RP",
+    nome: "Relações Públicas",
     descricao:
-      "Firmware, sistemas de controle autônomo e interface de operação remota.",
-  },
-  {
-    sigla: "TEL",
-    nome: "Telecomunicações",
-    descricao:
-      "Comunicação de dados entre rover e base, incluindo telemetria e controle.",
-  },
-  {
-    sigla: "GES",
-    nome: "Gestão",
-    descricao:
-      "Coordenação de equipe, parcerias, documentação e planejamento de competições.",
+      "Coordenação de equipe, parcerias, documentação e planejamento de competições, além de divulgação do projeto e captação de recursos.",
   },
 ];
 

@@ -11,11 +11,11 @@ const beneficios = [
     icone: "🎓",
     titulo: "Associação acadêmica",
     descricao:
-      "Parceria com a Universidade de Brasília e engenharia aeroespacial.",
+      "Parceria com a Universidade de Brasília e o Departamento de Engenharia Aeroespacial.",
   },
   {
     icone: "🚀",
-    titulo: "Impacto real",
+    titulo: "Fomento à Indústria Aeroespacial Nacional",
     descricao:
       "Apoio direto ao desenvolvimento de tecnologia espacial brasileira.",
   },
@@ -35,16 +35,22 @@ export default function Patrocinadores() {
           className="mx-auto mt-4 max-w-3xl text-4xl uppercase leading-tight sm:text-5xl"
           style={{ fontFamily: "var(--font-russo-one)" }}
         >
-          Quem nos ajuda a{" "}
-          <span className="text-[#D4A017]">decolar</span>
+          Quem nos ajuda a <span className="text-[#D4A017]">decolar</span>
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base text-black/70 sm:text-lg">
-          Apoiar a ARES é investir na nova geração de engenheiros aeroespaciais
-          do Brasil — e marcar presença em competições nacionais e
-          internacionais.
+          Apoiar a ARES é investir na nova geração de engenheiros do Brasil e na
+          indústria aeroespacial nacional — e marcar presença em competições
+          nacionais e internacionais.
         </p>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <h3
+          className="mx-auto mt-12 max-w-3xl text-4xl uppercase leading-tight sm:text-3xl text-[#4c1d95]"
+          style={{ fontFamily: "var(--font-russo-one)" }}
+        >
+          Benefícios de patrocinar a ARES
+        </h3>
+
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {beneficios.map((b) => (
             <div
               key={b.titulo}
