@@ -5,18 +5,19 @@ import logoImg from "@/public/Logo_dourada_roxa_dark.png";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen w-full overflow-hidden">
+    <section id="hero" className="relative min-h-dvh w-full overflow-hidden">
       <Image
         src={roverImg}
         alt="Rover em paisagem marciana"
         fill
         preload
+        sizes="100vw"
         className="object-cover object-center"
       />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/50" />
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-start justify-end px-6 pb-20 pt-28 lg:px-10 lg:pb-28">
+      <div className="relative z-10 mx-auto flex min-h-dvh w-full max-w-7xl flex-col items-start justify-end px-6 pb-20 pt-28 lg:px-10 lg:pb-28">
         <Image
           src={logoImg}
           alt="Logo Ares Rovers"

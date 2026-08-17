@@ -25,7 +25,7 @@ export default function Patrocinadores() {
   return (
     <section
       id="patrocinadores"
-      className="relative flex min-h-screen w-full items-center bg-white py-24 text-black"
+      className="relative flex min-h-dvh w-full items-center bg-white py-24 text-black"
     >
       <div className="mx-auto w-full max-w-7xl px-6 text-center lg:px-10">
         <span className="text-sm font-semibold uppercase tracking-[0.3em] text-[#4c1d95]">

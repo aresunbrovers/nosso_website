@@ -49,7 +49,7 @@ export default function Contato() {
   return (
     <section
       id="contato"
-      className="relative flex min-h-screen w-full items-center overflow-hidden bg-black py-24 text-white"
+      className="relative flex min-h-dvh w-full items-center overflow-hidden bg-black py-24 text-white"
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(76,29,149,0.55),transparent_60%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgba(0,0,0,0.7)_100%)]" />

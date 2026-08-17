@@ -8,12 +8,13 @@ export default function Equipe() {
   return (
     <section
       id="equipe"
-      className="relative flex min-h-screen w-full items-center overflow-hidden bg-[#4c1d95] py-24 text-white"
+      className="relative flex min-h-dvh w-full items-center overflow-hidden bg-[#4c1d95] py-24 text-white"
     >
       <Image
         src={equipeCampoImg}
         alt="Equipe Ares em campo, com todos os membros"
         fill
+        sizes="100vw"
         className="object-cover object-[center_35%]"
       />
       {/* Escurece a foto para não ofuscar o texto */}

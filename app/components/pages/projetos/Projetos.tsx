@@ -41,7 +41,7 @@ export default function Projetos() {
   return (
     <section
       id="projetos"
-      className="relative flex min-h-screen w-full items-center overflow-hidden bg-black py-24 text-white"
+      className="relative flex min-h-dvh w-full items-center overflow-hidden bg-black py-24 text-white"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(76,29,149,0.45),transparent_55%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_90%,rgba(212,160,23,0.18),transparent_55%)]" />

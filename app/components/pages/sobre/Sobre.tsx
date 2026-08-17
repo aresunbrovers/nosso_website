@@ -21,7 +21,7 @@ export default function Sobre() {
   return (
     <section
       id="sobre"
-      className="relative flex min-h-screen w-full items-center overflow-hidden bg-black text-white"
+      className="relative flex min-h-dvh w-full items-center overflow-hidden bg-black text-white"
     >
       {/* Logo da equipe como plano de fundo */}
       <Image
