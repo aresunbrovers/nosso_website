@@ -12,7 +12,7 @@ export default function Hero() {
         fill
         preload
         sizes="100vw"
-        className="object-cover object-center"
+        className="object-cover object-[65%_center] md:object-center"
       />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/50" />
