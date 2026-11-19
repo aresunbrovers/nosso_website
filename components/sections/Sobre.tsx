@@ -1,6 +1,6 @@
 import Image from "next/image";
 import exposicaoImg from "@/public/fotos/rover-exposicao.jpg";
-import Sheet from "../../Sheet";
+import Sheet from "@/components/layout/Sheet";
 
 const fatos = [
   { campo: "Áreas", valor: "7 · cinco de engenharia, duas de gestão" },

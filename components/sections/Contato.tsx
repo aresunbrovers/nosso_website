@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoImg from "@/public/Logo_dourada_roxa_dark.png";
-import Sheet from "../../Sheet";
-import { EMAIL, INSTAGRAM, LINKEDIN, MAILTO_PATROCINIO } from "../../dados";
+import logoImg from "@/public/brand/Logo_dourada_roxa_dark.png";
+import Sheet from "@/components/layout/Sheet";
+import { EMAIL, INSTAGRAM, LINKEDIN, MAILTO_PATROCINIO } from "@/content/site";
 
 const canais = [
   { campo: "Instagram", valor: "@ares.unb", href: INSTAGRAM },

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar from "@/components/layout/Navbar";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -10,7 +10,7 @@ const archivo = Archivo({
 });
 
 const siteUrl = "https://blazemorales.github.io/ARES_ROVERS_UNB_WEBSITE";
-const ogImage = `${siteUrl}/Logo_dourada_roxa.png`;
+const ogImage = `${siteUrl}/brand/Logo_dourada_roxa.png`;
 const description =
   "Equipe oficial de Rovers da Universidade de Brasília, vinculada à Engenharia Aeroespacial da UnB. Desenvolvemos veículos robóticos para exploração planetária.";
 

@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, type CSSProperties } from "react";
 import roverImg from "@/public/fotos/rover-bancada.jpg";
-import Sheet from "../../Sheet";
-import { INSTAGRAM, MAILTO_PATROCINIO, pecas, subsistemas } from "../../dados";
+import Sheet from "@/components/layout/Sheet";
+import { INSTAGRAM, MAILTO_PATROCINIO, pecas, subsistemas } from "@/content/site";
 
 const nomeDe = (sigla: string) =>
   subsistemas.find((s) => s.sigla === sigla)?.nome ?? sigla;

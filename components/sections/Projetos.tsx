@@ -1,8 +1,8 @@
 import Image from "next/image";
 import chassiImg from "@/public/fotos/chassi-bancada.jpg";
 import emUsoImg from "@/public/fotos/rover-em-uso.jpg";
-import Sheet from "../../Sheet";
-import { subsistemas } from "../../dados";
+import Sheet from "@/components/layout/Sheet";
+import { subsistemas } from "@/content/site";
 
 export default function Projetos() {
   return (

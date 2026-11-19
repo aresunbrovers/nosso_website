@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import logoImg from "@/public/Logo_ARES.png";
+import logoImg from "@/public/brand/Logo_ARES.png";
 
 const navLinks = [
   { href: "#hero", label: "Início" },

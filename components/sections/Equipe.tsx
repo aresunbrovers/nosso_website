@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import equipeImg from "@/public/equipe.jpg";
-import Sheet from "../../Sheet";
-import { INSTAGRAM, LINKEDIN } from "../../dados";
+import equipeImg from "@/public/fotos/equipe.jpg";
+import Sheet from "@/components/layout/Sheet";
+import { INSTAGRAM, LINKEDIN } from "@/content/site";
 
 export default function Equipe() {
   return (

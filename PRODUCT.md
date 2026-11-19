@@ -36,15 +36,14 @@ A equipe oficial de rovers da UnB: estudantes de várias engenharias construindo
 
 ## Brand Commitments
 
-- Nome ARES / ARES Rovers UnB; logo dourado e roxo (`public/Logo_dourada_roxa_dark.png`, `public/Logo_ARES.png`).
+- Nome ARES / ARES Rovers UnB; logo dourado e roxo (`public/brand/Logo_dourada_roxa_dark.png`, `public/brand/Logo_ARES.png`).
 - Cores do logo: dourado e roxo são da marca e devem permanecer reconhecíveis.
 
 ## Evidence on Hand
 
-- Foto real da equipe em campo com a bandeira: `public/equipe.jpg`.
+- Foto real da equipe em campo com a bandeira: `public/fotos/equipe.jpg`.
 - Logo em versões clara e escura.
 - Fotos reais do rover (enviadas em 2026-11-19), em `public/fotos/`: rover montado na bancada, rover em exposição com o sensor no mastro, rover em uso, chassi sem rodas na bancada e na oficina.
-- `public/rover_by_gettyimages.jpeg` é foto de banco (Getty), **não** é o rover da ARES; não deve ser apresentada como tal.
 - **Não existem** patrocinadores confirmados, resultados de competição, depoimentos ou números além de "7 áreas" e "30+ membros". Nada disso pode ser inventado.
 
 ## Product Principles
