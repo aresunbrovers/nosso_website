@@ -1,0 +1,373 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-19T00:00:00Z",
+  "title": "Design System: ARES Rovers UnB",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel Frio",
+        "canonical": "#f4f5f2",
+        "tonalRamp": [
+          "#494948",
+          "#929391",
+          "#dbdcd9",
+          "#f6f7f4",
+          "#f8f9f7",
+          "#fbfbfa",
+          "#fcfdfc",
+          "#fdfefd"
+        ]
+      },
+      "paper-deep": {
+        "role": "neutral",
+        "displayName": "Papel Fundo",
+        "canonical": "#e9ebe6",
+        "tonalRamp": [
+          "#454645",
+          "#8b8d8a",
+          "#d1d3cf",
+          "#edefeb",
+          "#f2f3f1",
+          "#f7f7f6",
+          "#fafbfa",
+          "#fcfdfc"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Nanquim",
+        "canonical": "#15171a",
+        "tonalRamp": [
+          "#060607",
+          "#0c0d0f",
+          "#121417",
+          "#434547",
+          "#7b7d7e",
+          "#aaabac",
+          "#d0d0d1",
+          "#e7e7e8"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Nanquim Diluído",
+        "canonical": "#4a4e55",
+        "tonalRamp": [
+          "#161719",
+          "#2c2e33",
+          "#42464c",
+          "#6e7177",
+          "#999b9f",
+          "#bdbfc1",
+          "#dadbdd",
+          "#eceded"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Grafite",
+        "canonical": "#c9ccc5",
+        "tonalRamp": [
+          "#3c3d3b",
+          "#787a76",
+          "#b4b7b1",
+          "#d3d6d0",
+          "#e0e2de",
+          "#ebecea",
+          "#f4f4f3",
+          "#f9f9f9"
+        ]
+      },
+      "purple": {
+        "role": "secondary",
+        "displayName": "Roxo Carimbo",
+        "canonical": "#4c1d95",
+        "tonalRamp": [
+          "#16082c",
+          "#2d1159",
+          "#441a86",
+          "#6f4aaa",
+          "#9a80c3",
+          "#beadd8",
+          "#dbd1e9",
+          "#ede8f4"
+        ]
+      },
+      "purple-ink": {
+        "role": "secondary",
+        "displayName": "Lavanda de Carimbo",
+        "canonical": "#ece6f7",
+        "tonalRamp": [
+          "#46454a",
+          "#8d8a94",
+          "#d4cfde",
+          "#efebf8",
+          "#f4f1fa",
+          "#f8f6fc",
+          "#fbfafd",
+          "#fdfcfe"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Dourado de Ação",
+        "canonical": "#d4a017",
+        "tonalRamp": [
+          "#3f3006",
+          "#7f600d",
+          "#be9014",
+          "#dcb345",
+          "#e6c97d",
+          "#efdcab",
+          "#f6ecd0",
+          "#faf5e7"
+        ]
+      },
+      "gold-hover": {
+        "role": "primary",
+        "displayName": "Dourado Aceso",
+        "canonical": "#e0ae24",
+        "tonalRamp": [
+          "#43340a",
+          "#866815",
+          "#c99c20",
+          "#e6be4f",
+          "#edd184",
+          "#f3e1b0",
+          "#f8eed3",
+          "#fbf6e9"
+        ]
+      },
+      "gold-soft": {
+        "role": "primary",
+        "displayName": "Dourado Pálido de Revisão",
+        "canonical": "#f3e2a8",
+        "tonalRamp": [
+          "#484332",
+          "#918764",
+          "#dacb97",
+          "#f5e7b9",
+          "#f8eece",
+          "#faf4df",
+          "#fcf9ed",
+          "#fdfcf6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Só o ARES da Folha 01."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Título de cada folha, em letreiro expandido."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Títulos de item em listas."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Parágrafo de apoio em ink-soft, 44–56ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Rótulos de cota, campos do carimbo, zonas da margem, etiqueta de folha."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Rótulo dos botões de traço e de ação."
+      }
+    },
+    "shadows": [
+      {
+        "name": "button-lift",
+        "value": "0 6px 14px -8px rgb(21 23 26 / 0.45)",
+        "purpose": "Só no hover de .btn, junto de translateY(-2px)."
+      },
+      {
+        "name": "nav-active",
+        "value": "inset 0 -3px 0 var(--ink)",
+        "purpose": "Sublinhado interno do item de nav ativo."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Curva padrão de estado e entrada (--ease-out-expo)."
+      },
+      {
+        "name": "button-hover",
+        "value": "220ms ease-out-expo; active 80ms",
+        "purpose": "Levantar e pressionar do botão."
+      },
+      {
+        "name": "link-draw",
+        "value": "320ms ease-out-expo",
+        "purpose": "Sublinhado que se traça no hover/foco."
+      },
+      {
+        "name": "view-zoom",
+        "value": "700ms ease-out-expo, scale(1.025)",
+        "purpose": "Aproximação da foto na janela de vista."
+      },
+      {
+        "name": "enter-rise",
+        "value": "800ms ease-out-expo, translateY(14px)",
+        "purpose": "Entrada do bloco de título da Folha 01."
+      },
+      {
+        "name": "enter-draw",
+        "value": "balão pop 450ms +250ms; linha draw 650ms +400ms; ponto fade 300ms +850ms; +120ms por peça",
+        "purpose": "Linhas de chamada se desenhando na Folha 01."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "durações 0.01ms, transformações de hover anuladas",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão de ação",
+      "kind": "button",
+      "refersTo": "button-action",
+      "description": "Único botão dourado: patrocinar.",
+      "html": "<a class=\"ds-btn ds-btn-action\" href=\"#\">Quero patrocinar</a>",
+      "css": ".ds-btn{display:inline-flex;min-height:3rem;align-items:center;justify-content:center;gap:.625rem;border:1.5px solid var(--ink,#15171a);padding:.75rem 1.5rem;font-family:Archivo,system-ui,sans-serif;font-size:.9375rem;font-weight:700;font-variation-settings:'wdth' 112;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;border-radius:0;transition:transform 220ms cubic-bezier(.16,1,.3,1),background-color 180ms ease,color 180ms ease,box-shadow 220ms cubic-bezier(.16,1,.3,1)}.ds-btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px -8px rgb(21 23 26/.45)}.ds-btn:active{transform:translateY(0) scale(.985);box-shadow:none;transition-duration:80ms}.ds-btn:focus-visible{outline:2px solid var(--purple,#4c1d95);outline-offset:3px}.ds-btn-action{background:var(--gold,#d4a017);color:var(--ink,#15171a)}.ds-btn-action:hover{background:#e0ae24}"
+    },
+    {
+      "name": "Botão de traço",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Ações secundárias (seguir, contatar) sobre papel.",
+      "html": "<a class=\"ds-btn-line\" href=\"#\">Seguir a equipe</a>",
+      "css": ".ds-btn-line{display:inline-flex;min-height:3rem;align-items:center;justify-content:center;border:1.5px solid var(--ink,#15171a);padding:.75rem 1.5rem;background:transparent;color:var(--ink,#15171a);font-family:Archivo,system-ui,sans-serif;font-size:.9375rem;font-weight:700;font-variation-settings:'wdth' 112;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;border-radius:0;transition:transform 220ms cubic-bezier(.16,1,.3,1),background-color 180ms ease,color 180ms ease}.ds-btn-line:hover{background:var(--ink,#15171a);color:var(--paper,#f4f5f2);transform:translateY(-2px)}.ds-btn-line:focus-visible{outline:2px solid var(--purple,#4c1d95);outline-offset:3px}"
+    },
+    {
+      "name": "Botão de traço claro",
+      "kind": "button",
+      "refersTo": "button-line-light",
+      "description": "Ação secundária sobre o roxo do carimbo.",
+      "html": "<div class=\"ds-on-purple\"><a class=\"ds-btn-light\" href=\"#\">Instagram</a></div>",
+      "css": ".ds-on-purple{background:var(--purple,#4c1d95);padding:1.5rem}.ds-btn-light{display:inline-flex;min-height:3rem;align-items:center;border:1.5px solid var(--purple-ink,#ece6f7);padding:.75rem 1.5rem;color:#fff;font-family:Archivo,system-ui,sans-serif;font-size:.9375rem;font-weight:700;font-variation-settings:'wdth' 112;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;transition:background-color 180ms ease,color 180ms ease}.ds-btn-light:hover{background:#fff;color:var(--purple,#4c1d95)}.ds-btn-light:focus-visible{outline:2px solid #fff;outline-offset:3px}"
+    },
+    {
+      "name": "Navegação",
+      "kind": "nav",
+      "refersTo": "nav-bar",
+      "description": "Barra fixa de células numeradas com ação de patrocínio.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-brand\" href=\"#\">ARES</a><a class=\"ds-nav-link ds-active\" href=\"#\"><span>01</span>Início</a><a class=\"ds-nav-link\" href=\"#\"><span>02</span>Sobre</a><a class=\"ds-nav-link\" href=\"#\"><span>03</span>Rover</a></nav>",
+      "css": ".ds-nav{display:flex;height:3.5rem;align-items:stretch;border-bottom:2px solid var(--ink,#15171a);background:var(--paper,#f4f5f2);font-family:Archivo,system-ui,sans-serif}.ds-nav-brand{display:flex;align-items:center;padding:0 1rem;border-right:2px solid var(--ink,#15171a);font-weight:800;font-variation-settings:'wdth' 125;text-transform:uppercase;font-size:1.125rem;color:var(--ink,#15171a);text-decoration:none}.ds-nav-link{display:flex;align-items:center;gap:.5rem;padding:0 1.25rem;border-right:1px solid var(--line,#c9ccc5);font-size:.875rem;font-weight:600;color:var(--ink,#15171a);text-decoration:none;transition:background-color 150ms}.ds-nav-link span{color:var(--ink-soft,#4a4e55);font-variant-numeric:tabular-nums}.ds-nav-link:hover{background:var(--paper-deep,#e9ebe6)}.ds-nav-link.ds-active{background:var(--paper-deep,#e9ebe6);box-shadow:inset 0 -3px 0 var(--ink,#15171a)}.ds-nav-link:focus-visible{outline:2px solid var(--purple,#4c1d95);outline-offset:-2px}"
+    },
+    {
+      "name": "Folha",
+      "kind": "card",
+      "refersTo": "sheet",
+      "description": "Contêiner de cada seção: margem de 2px, célula de conteúdo e etiqueta de folha.",
+      "html": "<section class=\"ds-sheet\"><div class=\"ds-sheet-body\"><h2 class=\"ds-lettering\">Nosso primeiro rover</h2><p>Estudantes da UnB em cinco frentes de engenharia.</p></div><div class=\"ds-sheet-tag\"><span class=\"ds-label\">Lista de peças</span><span class=\"ds-label\">Folha</span><b>03/06</b></div></section>",
+      "css": ".ds-sheet{border:2px solid var(--ink,#15171a);background:var(--paper,#f4f5f2);font-family:Archivo,system-ui,sans-serif;color:var(--ink,#15171a)}.ds-sheet-body{padding:2.5rem}.ds-sheet-body p{margin-top:1.5rem;font-size:1.125rem;line-height:1.625;color:var(--ink-soft,#4a4e55);max-width:56ch}.ds-lettering{margin:0;font-size:clamp(2.25rem,5vw,4.25rem);font-weight:800;font-variation-settings:'wdth' 125;text-transform:uppercase;letter-spacing:-.01em;line-height:.92}.ds-sheet-tag{display:flex;justify-content:flex-end;align-items:center;gap:.75rem;border-top:2px solid var(--ink,#15171a);padding:.5rem 1rem}.ds-sheet-tag b{font-size:.875rem;font-variant-numeric:tabular-nums}.ds-label{font-size:.6875rem;font-weight:600;font-variation-settings:'wdth' 112;text-transform:uppercase;letter-spacing:.08em;line-height:1;opacity:.7}"
+    },
+    {
+      "name": "Carimbo",
+      "kind": "custom",
+      "refersTo": "title-block",
+      "description": "Bloco de título roxo com campos rótulo/valor e marca de revisão dourada.",
+      "html": "<div class=\"ds-stamp\"><div><span class=\"ds-stamp-label\">Equipe</span><b>ARES · Aerospace Rover Exploration System</b></div><div><span class=\"ds-stamp-label\">Revisão</span><b><svg viewBox=\"0 0 12 11\" width=\"12\" height=\"12\" aria-hidden=\"true\"><path d=\"M6 1 11 10H1z\" fill=\"none\" stroke=\"#d4a017\" stroke-width=\"1.5\"/></svg> Em desenvolvimento</b></div></div>",
+      "css": ".ds-stamp{display:flex;flex-wrap:wrap;background:var(--purple,#4c1d95);color:#fff;font-family:Archivo,system-ui,sans-serif}.ds-stamp>div{display:flex;flex-direction:column;gap:.25rem;padding:.5rem 1rem}.ds-stamp>div+div{border-left:2px solid rgb(236 230 247/.4)}.ds-stamp b{display:flex;align-items:center;gap:.5rem;font-size:.875rem}.ds-stamp-label{font-size:.6875rem;font-weight:600;font-variation-settings:'wdth' 112;text-transform:uppercase;letter-spacing:.08em;line-height:1;color:rgb(236 230 247/.8)}"
+    },
+    {
+      "name": "Balão de peça",
+      "kind": "custom",
+      "refersTo": "balloon",
+      "description": "Balão numerado de lista de peças; acende em dourado junto da linha da lista.",
+      "html": "<div class=\"ds-balloons\"><a class=\"ds-balloon\" href=\"#\">1</a><a class=\"ds-balloon ds-on\" href=\"#\">2</a></div>",
+      "css": ".ds-balloons{display:flex;gap:1.5rem;padding:1rem;background:var(--paper,#f4f5f2)}.ds-balloon{display:grid;place-items:center;width:2.75rem;height:2.75rem;border:1.5px solid var(--ink,#15171a);border-radius:9999px;background:var(--paper,#f4f5f2);color:var(--ink,#15171a);font-family:Archivo,system-ui,sans-serif;font-weight:800;font-variation-settings:'wdth' 112;text-decoration:none;font-variant-numeric:tabular-nums;transition:background-color 180ms ease,transform 260ms cubic-bezier(.16,1,.3,1)}.ds-balloon:hover,.ds-balloon:focus-visible,.ds-balloon.ds-on{background:var(--gold,#d4a017);transform:scale(1.08)}.ds-balloon:focus-visible{outline:2px solid var(--purple,#4c1d95);outline-offset:3px}"
+    },
+    {
+      "name": "Janela de vista",
+      "kind": "card",
+      "refersTo": "view",
+      "description": "Foto real recortada na folha, com cantoneiras de papel.",
+      "html": "<div class=\"ds-view\"></div>",
+      "css": ".ds-view{position:relative;overflow:hidden;width:18rem;aspect-ratio:4/3;border:1.5px solid var(--ink,#15171a);background:var(--paper-deep,#e9ebe6)}.ds-view::before,.ds-view::after{content:'';position:absolute;width:14px;height:14px}.ds-view::before{top:6px;left:6px;border-top:2px solid var(--ink-soft,#4a4e55);border-left:2px solid var(--ink-soft,#4a4e55)}.ds-view::after{right:6px;bottom:6px;border-right:2px solid var(--ink-soft,#4a4e55);border-bottom:2px solid var(--ink-soft,#4a4e55)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Prancha na Bancada",
+    "overview": "O rover da ARES ainda está na bancada, então o site é o jogo de folhas do projeto: cada seção é uma prancha de desenho técnico numerada (Folha 01/06 a 06/06), com margem em traço grosso, zonas A–F e 1–8 nas bordas, etiqueta de folha no canto inferior direito e, quando cabe, o carimbo roxo da equipe. O papel é frio e milimetrado; tudo é desenhado a nanquim em dois pesos de traço; as fotos reais do rover entram como janelas de vista recortadas na folha.\n\nA densidade é de prancha, não de landing page: blocos separados por traços de 2px que dividem a folha em células, títulos em letreiro expandido, rótulos de cota em caixa alta pequena. A cor é quase toda neutra; o dourado aparece apenas onde há uma ação ou uma marca de revisão, e o roxo apenas no carimbo e na marca. A recusa central, confirmada no contrato de direção, é o padrão da categoria: página preta espacial com brilho e cards.\n\nO movimento é de desenho: na Folha 01 as linhas de chamada se traçam da borda da foto até a peça, o balão surge quando a linha parte e o ponto quando ela chega. Fora disso, só respostas de estado curtas.",
+    "keyCharacteristics": [
+      "Cada seção é uma folha (`Sheet`) com margem de 2px, zonas nas bordas e etiqueta \"Folha NN/06\".",
+      "Papel frio com malha milimetrada (8px fina, 40px grossa) como fundo do `body`.",
+      "Nanquim em dois pesos: 2px para margens e divisões de célula, 1.5px para botões, janelas e balões; 1px em `line` para linhas de tabela.",
+      "Uma única família, Archivo, variando o eixo `wdth` (100 texto, 112 rótulos e botões, 125 letreiro).",
+      "Cantos retos em tudo, exceto o balão de peça, que é círculo por convenção de desenho técnico.",
+      "Fotos reais do rover e da equipe em janelas de vista com cantoneiras."
+    ],
+    "rules": [
+      {
+        "name": "The Gold Is Action Rule",
+        "body": "O dourado só marca o que se clica para agir (patrocinar) ou o que está em revisão. Nunca como decoração, faixa de seção, título ou ícone solto.",
+        "section": "colors"
+      },
+      {
+        "name": "The Purple Is Stamp Rule",
+        "body": "O roxo só aparece no carimbo, no bloco de contato que é um carimbo ampliado e nos sinais do sistema (foco, caret). Nunca como fundo de seção inteira ou cor de texto corrido.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Toda tipografia é Archivo; varia-se `wdth` e peso. Não se introduz segunda família, serifada ou monoespaçada.",
+        "section": "typography"
+      },
+      {
+        "name": "The Label Is A Field Rule",
+        "body": "O rótulo de cota nomeia um campo ou uma tabela (Equipe, Revisão, Folha, Lista de peças). Não vira sobretítulo acima de um headline.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Sheet Rule",
+        "body": "Nada repousa com sombra. Se algo precisa se destacar, ganha um traço ou uma célula própria.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** colocar toda seção nova numa `Sheet` com número de folha próprio e atualizar `TOTAL_FOLHAS`.",
+      "**Do** separar conteúdo por traços de 2px em `ink` entre células, com padding 24/40/48px.",
+      "**Do** usar o botão de ação dourado só para patrocinar; seguir/contatar usa botão de traço.",
+      "**Do** usar fotos reais do rover e da equipe em janelas de vista com cantoneiras.",
+      "**Do** variar `wdth` do Archivo (100/112/125) em vez de trocar de família.",
+      "**Do** respeitar `prefers-reduced-motion`: animações e transformações de hover zeradas."
+    ],
+    "donts": [
+      "**Don't** usar fundo preto espacial, brilho, gradiente ou cards flutuantes; é o padrão da categoria que este mundo recusa.",
+      "**Don't** usar dourado como decoração, título, faixa ou ícone; ele é ação e revisão.",
+      "**Don't** usar roxo fora do carimbo, do bloco de contato e dos sinais de foco.",
+      "**Don't** arredondar cantos; só o balão de peça é circular.",
+      "**Don't** pôr sombra em repouso; a única sombra é o hover do botão.",
+      "**Don't** colocar rótulo de cota como sobretítulo acima de um headline."
+    ]
+  }
+}

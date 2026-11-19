@@ -1,21 +1,21 @@
-import Link from "next/link";
+import Image from "next/image";
+import oficinaImg from "@/public/fotos/chassi-oficina.jpg";
+import Sheet from "../../Sheet";
+import { MAILTO_PATROCINIO } from "../../dados";
 
 const beneficios = [
   {
-    icone: "🏆",
     titulo: "Visibilidade em competições",
     descricao:
-      "Sua marca presente em competições nacionais e internacionais de rovers.",
+      "Sua marca presente nas competições de rovers que a equipe disputar.",
   },
   {
-    icone: "🎓",
     titulo: "Associação acadêmica",
     descricao:
       "Parceria com a Universidade de Brasília e o Departamento de Engenharia Aeroespacial.",
   },
   {
-    icone: "🚀",
-    titulo: "Fomento à Indústria Aeroespacial Nacional",
+    titulo: "Fomento à indústria aeroespacial nacional",
     descricao:
       "Apoio direto ao desenvolvimento de tecnologia espacial brasileira.",
   },
@@ -23,66 +23,54 @@ const beneficios = [
 
 export default function Patrocinadores() {
   return (
-    <section
-      id="patrocinadores"
-      className="relative flex min-h-dvh w-full items-center bg-white py-24 text-black"
-    >
-      <div className="mx-auto w-full max-w-7xl px-6 text-center lg:px-10">
-        <span className="text-sm font-semibold uppercase tracking-[0.3em] text-[#4c1d95]">
-          Patrocinadores
-        </span>
-        <h2
-          className="mx-auto mt-4 max-w-3xl text-4xl uppercase leading-tight sm:text-5xl"
-          style={{ fontFamily: "var(--font-russo-one)" }}
-        >
-          Quem nos ajuda a <span className="text-[#D4A017]">decolar</span>
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-base text-black/70 sm:text-lg">
-          Apoiar a ARES é investir na nova geração de engenheiros do Brasil e na
-          indústria aeroespacial nacional — e marcar presença em competições
-          nacionais e internacionais.
-        </p>
+    <Sheet id="patrocinadores" folha={5} titulo="Patrocínio">
+      <div className="grid lg:grid-cols-12">
+        <div className="p-6 sm:p-10 lg:col-span-7 lg:p-12">
+          <h2 id="patrocinadores-titulo" className="lettering text-[clamp(2.25rem,5vw,4.25rem)]">
+            Patrocine o primeiro rover da ARES
+          </h2>
+          <p className="mt-8 max-w-[58ch] text-lg leading-relaxed text-ink-soft">
+            Apoiar a ARES é investir na nova geração de engenheiros do Brasil e
+            na indústria aeroespacial nacional — e marcar presença em
+            competições nacionais e internacionais.
+          </p>
 
-        <h3
-          className="mx-auto mt-12 max-w-3xl text-4xl uppercase leading-tight sm:text-3xl text-[#4c1d95]"
-          style={{ fontFamily: "var(--font-russo-one)" }}
-        >
-          Benefícios de patrocinar a ARES
-        </h3>
+          <ul className="mt-10 border-t-2 border-ink">
+            {beneficios.map((b) => (
+              <li key={b.titulo} className="border-b border-line py-5">
+                <h3 className="text-lg font-bold leading-snug">{b.titulo}</h3>
+                <p className="mt-1 text-base leading-relaxed text-ink-soft">
+                  {b.descricao}
+                </p>
+              </li>
+            ))}
+          </ul>
 
-        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {beneficios.map((b) => (
-            <div
-              key={b.titulo}
-              className="rounded-2xl border border-black/10 bg-black/[0.02] p-8 text-left"
-            >
-              <span className="text-3xl">{b.icone}</span>
-              <h3 className="mt-4 text-base font-semibold text-black">
-                {b.titulo}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-black/60">
-                {b.descricao}
+          <div className="mt-10 border-2 border-ink">
+            <div className="flex flex-col gap-5 bg-gold-soft p-6 sm:flex-row sm:items-center sm:justify-between">
+              <p className="max-w-[40ch] text-base font-semibold leading-snug">
+                Ainda não temos patrocinadores confirmados. Sua empresa pode ser
+                a primeira a apoiar a ARES.
               </p>
+              <a href={MAILTO_PATROCINIO} className="btn btn-action shrink-0">
+                Quero patrocinar
+              </a>
             </div>
-          ))}
+          </div>
         </div>
 
-        <div className="mt-14 rounded-2xl border-2 border-dashed border-[#4c1d95]/30 bg-[#4c1d95]/[0.03] p-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#4c1d95]">
-            Seja o primeiro
-          </p>
-          <p className="mx-auto mt-3 max-w-md text-base text-black/60">
-            Ainda não temos patrocinadores confirmados. Sua empresa pode ser a
-            primeira a apoiar a ARES!
-          </p>
-          <Link
-            href="#contato"
-            className="mt-6 inline-block rounded-full bg-black px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-[#4c1d95]"
-          >
-            Quero patrocinar
-          </Link>
+        <div className="border-t-2 border-ink p-4 sm:p-8 lg:col-span-5 lg:border-l-2 lg:border-t-0">
+          <div className="view aspect-[4/3] w-full">
+            <Image
+              src={oficinaImg}
+              alt="Chassi do rover sobre uma bancada na oficina, ao lado de uma furadeira de coluna"
+              fill
+              sizes="(min-width: 1024px) 38vw, 100vw"
+              className="object-cover object-[50%_50%]"
+            />
+          </div>
         </div>
       </div>
-    </section>
+    </Sheet>
   );
 }

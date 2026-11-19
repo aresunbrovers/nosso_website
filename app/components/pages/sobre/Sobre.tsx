@@ -1,85 +1,65 @@
 import Image from "next/image";
-import logoImg from "@/public/Logo_dourada_roxa_dark.png";
+import exposicaoImg from "@/public/fotos/rover-exposicao.jpg";
+import Sheet from "../../Sheet";
 
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <div>
-      <dt
-        className="text-3xl text-[#D4A017] sm:text-4xl"
-        style={{ fontFamily: "var(--font-russo-one)" }}
-      >
-        {value}
-      </dt>
-      <dd className="mt-1 text-xs uppercase tracking-wider text-white/50">
-        {label}
-      </dd>
-    </div>
-  );
-}
+const fatos = [
+  { campo: "Áreas", valor: "7 · cinco de engenharia, duas de gestão" },
+  { campo: "Membros", valor: "30+ estudantes" },
+  { campo: "Faculdade", valor: "FCTE · UnB Gama" },
+];
 
 export default function Sobre() {
   return (
-    <section
-      id="sobre"
-      className="relative flex min-h-dvh w-full items-center overflow-hidden bg-black text-white"
-    >
-      {/* Logo da equipe como plano de fundo */}
-      <Image
-        src={logoImg}
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[85vw] w-[85vw] max-h-[640px] max-w-[640px] -translate-x-1/2 -translate-y-1/2 md:left-[28%] md:h-[70vh] md:w-[70vh]"
-      />
-
-      {/* Acento roxo sutil sobre o fundo */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_85%,rgba(76,29,149,0.3),transparent_55%)]" />
-
-      {/* Painel de texto:
-          – mobile:   gradiente de cima (transparent) para baixo (black), ocupa tela toda
-          – desktop:  gradiente da esquerda (transparent) para direita (black), ocupa metade direita */}
-      <div
-        className="
-          absolute inset-x-0 bottom-0 flex flex-col justify-end px-6 pb-16 pt-32
-          bg-[linear-gradient(to_top,rgba(0,0,0,0.97)_55%,rgba(0,0,0,0.6)_80%,transparent_100%)]
-          md:inset-y-0 md:left-auto md:right-0 md:w-[52%] md:justify-center
-          md:pb-0 md:pt-0 md:px-0
-          md:bg-[linear-gradient(to_right,transparent_0%,rgba(0,0,0,0.92)_28%,rgb(0,0,0)_55%)]
-        "
-      >
-        <div className="md:px-14 lg:px-16">
-          <span className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4A017]">
-            Sobre nós
-          </span>
-          <h2
-            className="mt-4 text-4xl uppercase leading-tight sm:text-5xl lg:text-[3.25rem]"
-            style={{ fontFamily: "var(--font-russo-one)" }}
-          >
-            Engenharia que <span className="text-[#4c1d95]">conquista</span>{" "}
-            outros mundos
+    <Sheet id="sobre" folha={2} titulo="Quem somos">
+      <div className="grid lg:grid-cols-12">
+        <div className="p-6 sm:p-10 lg:col-span-7 lg:p-12">
+          <h2 id="sobre-titulo" className="lettering text-[clamp(2.25rem,5vw,4.25rem)]">
+            Uma equipe de competição da UnB
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-white/75 sm:text-lg">
-            A ARES (Aerospace Rover Exploration System) é a equipe oficial de
-            Rovers da Universidade de Brasília, vinculada à Engenharia
-            Aeroespacial da UnB. Nosso objetivo é desenvolver veículos robóticos
-            capazes de operar em terrenos análogos a superfícies
-            extraterrestres.
-          </p>
-          <p className="mt-4 text-base leading-relaxed text-white/75 sm:text-lg">
-            Atuamos de forma multidisciplinar nas áreas de{" "}
-            <span className="font-bold">
-              Controle e Comunicação, Dinâmica, Elétrica, Estruturas, Financeiro
-              e Relações Públicas
-            </span>
-            , integrando ensino, pesquisa e inovação aplicada.
-          </p>
+          <div className="mt-8 max-w-[62ch] space-y-4 text-lg leading-relaxed text-ink-soft">
+            <p>
+              A ARES (Aerospace Rover Exploration System) é a equipe oficial de
+              Rovers da Universidade de Brasília, vinculada à Engenharia
+              Aeroespacial da UnB.
+            </p>
+            <p>
+              Projetamos, simulamos e construímos rovers de exploração de solo,
+              capazes de atuar em condições convencionais e em simulações de
+              exploração espacial.
+            </p>
+            <p>
+              Nosso objetivo é competir nacional e internacionalmente e
+              representar a UnB cada vez mais longe.
+            </p>
+          </div>
 
-          <dl className="mt-8 grid grid-cols-3 gap-6 border-t border-white/15 pt-6">
-            <Stat value="6" label="Subsistemas" />
-            <Stat value="30+" label="Membros" />
-            <Stat value="∞" label="Ambições" />
+          <dl className="mt-10 max-w-xl border-2 border-ink">
+            {fatos.map((f) => (
+              <div
+                key={f.campo}
+                className="grid grid-cols-[7.5rem_1fr] border-ink not-first:border-t"
+              >
+                <dt className="field-label flex items-center border-r border-ink px-4 py-3 text-ink-soft">
+                  {f.campo}
+                </dt>
+                <dd className="px-4 py-3 text-base font-semibold">{f.valor}</dd>
+              </div>
+            ))}
           </dl>
         </div>
+
+        <div className="border-t-2 border-ink p-4 sm:p-8 lg:col-span-5 lg:border-l-2 lg:border-t-0">
+          <div className="view aspect-[4/5] w-full">
+            <Image
+              src={exposicaoImg}
+              alt="Rover da ARES exposto numa mesa com a toalha da equipe, com o sensor no alto do mastro e o banner da equipe ao fundo"
+              fill
+              sizes="(min-width: 1024px) 38vw, 100vw"
+              className="object-cover object-[50%_95%]"
+            />
+          </div>
+        </div>
       </div>
-    </section>
+    </Sheet>
   );
 }

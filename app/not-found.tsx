@@ -46,8 +46,8 @@ export default function NotFound() {
   }, []);
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-black px-6 text-center text-white">
-      <p className="text-sm text-white/70">Redirecionando…</p>
+    <main className="flex min-h-screen items-center justify-center px-6 text-center">
+      <p className="text-sm text-ink-soft">Redirecionando…</p>
     </main>
   );
 }

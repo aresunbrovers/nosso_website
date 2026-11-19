@@ -1,22 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Russo_One } from "next/font/google";
+import { Archivo } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const russoOne = Russo_One({
-  variable: "--font-russo-one",
-  subsets: ["latin"],
-  weight: "400",
+  axes: ["wdth"],
 });
 
 const siteUrl = "https://blazemorales.github.io/ARES_ROVERS_UNB_WEBSITE";
@@ -72,9 +62,9 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${geistMono.variable} ${russoOne.variable} h-full scroll-smooth antialiased`}
+      className={`${archivo.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="flex min-h-full flex-col">
         <Navbar />
         {children}
       </body>
