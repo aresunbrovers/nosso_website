@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 
-const siteUrl = "https://blazemorales.github.io/ARES_ROVERS_UNB_WEBSITE";
+const siteUrl = "https://aresunbrovers.vercel.app";
 
 export default function robots(): MetadataRoute.Robots {
   return {

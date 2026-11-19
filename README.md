@@ -59,7 +59,7 @@ A navegação é por âncora (`#sobre`, `#projetos`, `#equipe`, `#patrocinadores
 - **Fotos:** coloque o arquivo em `public/fotos/` e importe na seção (`import foto from "@/public/fotos/nome.jpg"`). Sempre escreva um `alt` descrevendo a foto.
 - **Cores e estilos base:** os tokens ficam no topo de `app/globals.css`.
 
-Pendência conhecida: a sigla (`BRA`) e a descrição da área de Braço Robótico, em `content/site.ts`, são provisórias e aparecem no site como "a confirmar".
+Pendência conhecida: a descrição da área de Braço Robótico (sigla `BR`), em `content/site.ts`, é provisória e aparece no site como "a confirmar".
 
 ## Branches
 
@@ -71,9 +71,7 @@ Pendência conhecida: a sigla (`BRA`) e a descrição da área de Braço Robóti
 
 ## Deploy
 
-O site é publicado pela **Vercel** desde o commit "fix: deploy na Vercel", que removeu a exportação estática para o GitHub Pages. O comando antigo (`npx gh-pages -d out`) não funciona mais, porque o build não gera a pasta `out/`.
-
-> A constante `siteUrl` em `app/layout.tsx`, `app/sitemap.ts` e `app/robots.ts` (usada no Open Graph, no sitemap e no robots) ainda aponta para o endereço antigo do GitHub Pages. Atualize nos três arquivos para o domínio da Vercel quando ele estiver definido.
+O site é publicado pela **Vercel**, em [aresunbrovers.vercel.app](https://aresunbrovers.vercel.app), desde o commit "fix: deploy na Vercel", que removeu a exportação estática para o GitHub Pages. O comando antigo (`npx gh-pages -d out`) não funciona mais, porque o build não gera a pasta `out/`.
 
 ## Arquivos que ficam fora do Git
 

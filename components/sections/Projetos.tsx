@@ -62,7 +62,7 @@ export default function Projetos() {
               </p>
               {s.provisorio && (
                 <p className="mt-2 text-sm font-semibold text-night-soft">
-                  Sigla e descrição a confirmar
+                  Descrição a confirmar
                 </p>
               )}
             </li>
