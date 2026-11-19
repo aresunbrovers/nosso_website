@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 /* Mundo: céu de Brasília.
-   O céu é o chão da página e muda ao longo do dia (meio-dia, tarde, entardecer).
-   Ipê amarelo só para ação; ipê roxo é o entardecer e a marca. */
+   O céu é o chão da página, no roxo da equipe (o ipê roxo), e escurece ao longo
+   do dia (meio-dia, tarde, entardecer). Ipê amarelo só para ação. */
 :root {
   /* roxo da equipe (#4c1d95), o ipê roxo de Brasília, em três horas do dia */
   --sky-noon: #4c1d95;

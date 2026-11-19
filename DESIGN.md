@@ -1,243 +1,250 @@
 ---
 name: ARES Rovers UnB
-description: O site como jogo de folhas de um projeto técnico, com o rover real na bancada.
+description: A equipe constrói sob o céu de Brasília; o céu é o chão da página e passa do meio-dia ao entardecer roxo.
 colors:
-  paper: "#f4f5f2"
-  paper-deep: "#e9ebe6"
-  ink: "#15171a"
-  ink-soft: "#4a4e55"
-  line: "#c9ccc5"
-  purple: "#4c1d95"
-  purple-ink: "#ece6f7"
-  gold: "#d4a017"
-  gold-hover: "#e0ae24"
-  gold-soft: "#f3e2a8"
+  sky-noon: "#4c1d95"
+  sky-noon-deep: "#3f1782"
+  sky-afternoon: "#3a1478"
+  sky-dusk: "#2a0f5c"
+  sky-dusk-deep: "#170838"
+  concrete: "#f1f2ef"
+  concrete-deep: "#e3e5e0"
+  night: "#14213d"
+  night-soft: "#45506a"
+  rule: "#c9cdd3"
+  ipe-yellow: "#d4a017"
+  ipe-yellow-hover: "#e6b52a"
+  cloud: "#ffffff"
 typography:
   display:
-    fontFamily: "Archivo, system-ui, sans-serif"
-    fontSize: "clamp(5rem, 13vw, 11rem)"
-    fontWeight: 800
-    lineHeight: 0.92
-    letterSpacing: "-0.01em"
-    fontVariation: "\"wdth\" 125"
-  headline:
-    fontFamily: "Archivo, system-ui, sans-serif"
-    fontSize: "clamp(2.25rem, 5vw, 4.25rem)"
-    fontWeight: 800
-    lineHeight: 0.92
-    letterSpacing: "-0.01em"
-    fontVariation: "\"wdth\" 125"
-  title:
-    fontFamily: "Archivo, system-ui, sans-serif"
-    fontSize: "1.125rem"
+    fontFamily: "Unbounded, system-ui, sans-serif"
+    fontSize: "clamp(5.5rem, 19vw, 16rem)"
     fontWeight: 700
+    lineHeight: 0.95
+    letterSpacing: "-0.03em"
+  display-sm:
+    fontFamily: "Unbounded, system-ui, sans-serif"
+    fontSize: "clamp(3rem, 8vw, 6rem)"
+    fontWeight: 700
+    lineHeight: 0.95
+    letterSpacing: "-0.03em"
+  headline:
+    fontFamily: "Unbounded, system-ui, sans-serif"
+    fontSize: "clamp(2.25rem, 5vw, 4rem)"
+    fontWeight: 600
+    lineHeight: 1.05
+    letterSpacing: "-0.025em"
+  title:
+    fontFamily: "Unbounded, system-ui, sans-serif"
+    fontSize: "1.25rem"
+    fontWeight: 600
+    lineHeight: 1.05
+    letterSpacing: "-0.025em"
+  body-lead:
+    fontFamily: "Figtree, system-ui, sans-serif"
+    fontSize: "1.25rem"
+    fontWeight: 400
     lineHeight: 1.375
-    fontVariation: "\"wdth\" 100"
   body:
-    fontFamily: "Archivo, system-ui, sans-serif"
+    fontFamily: "Figtree, system-ui, sans-serif"
     fontSize: "1.125rem"
     fontWeight: 400
     lineHeight: 1.625
-    fontVariation: "\"wdth\" 100"
   label:
-    fontFamily: "Archivo, system-ui, sans-serif"
-    fontSize: "0.6875rem"
+    fontFamily: "Figtree, system-ui, sans-serif"
+    fontSize: "0.875rem"
     fontWeight: 600
-    lineHeight: 1
-    letterSpacing: "0.08em"
-    fontVariation: "\"wdth\" 112"
+    lineHeight: 1.43
   button:
-    fontFamily: "Archivo, system-ui, sans-serif"
-    fontSize: "0.9375rem"
+    fontFamily: "Figtree, system-ui, sans-serif"
+    fontSize: "1rem"
     fontWeight: 700
-    letterSpacing: "0.04em"
-    fontVariation: "\"wdth\" 112"
+    lineHeight: 1.5
 rounded:
-  none: "0px"
-  balloon: "9999px"
+  focus: "6px"
+  photo: "2rem"
+  pill: "9999px"
 spacing:
-  sheet-gutter: "8px"
-  sheet-gutter-sm: "16px"
-  cell: "24px"
-  cell-sm: "40px"
-  cell-lg: "48px"
-  grid-fine: "8px"
-  grid-major: "40px"
+  gutter: "1.5rem"
+  gutter-lg: "2.5rem"
+  grid-gap: "4rem"
+  section: "6rem"
+  section-lg: "8rem"
+  container: "80rem"
 components:
-  button-action:
-    backgroundColor: "{colors.gold}"
-    textColor: "{colors.ink}"
+  button-ipe:
+    backgroundColor: "{colors.ipe-yellow}"
+    textColor: "{colors.night}"
     typography: "{typography.button}"
-    rounded: "{rounded.none}"
-    padding: "12px 24px"
-    height: "48px"
-  button-action-hover:
-    backgroundColor: "{colors.gold-hover}"
-  button-line:
+    rounded: "{rounded.pill}"
+    padding: "0.8rem 1.75rem"
+    height: "3rem"
+  button-ipe-hover:
+    backgroundColor: "{colors.ipe-yellow-hover}"
+    textColor: "{colors.night}"
+  button-cloud:
     backgroundColor: "transparent"
-    textColor: "{colors.ink}"
+    textColor: "{colors.cloud}"
     typography: "{typography.button}"
-    rounded: "{rounded.none}"
-    padding: "12px 24px"
-    height: "48px"
-  button-line-hover:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.paper}"
-  button-line-light:
-    backgroundColor: "transparent"
-    textColor: "#ffffff"
-    rounded: "{rounded.none}"
-    padding: "12px 24px"
-  button-line-light-hover:
-    backgroundColor: "#ffffff"
-    textColor: "{colors.purple}"
-  balloon:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.balloon}"
-    size: "44px"
-  balloon-active:
-    backgroundColor: "{colors.gold}"
-  title-block:
-    backgroundColor: "{colors.purple}"
-    textColor: "#ffffff"
-    rounded: "{rounded.none}"
-    padding: "8px 16px"
+    rounded: "{rounded.pill}"
+    padding: "0.8rem 1.75rem"
+    height: "3rem"
+  button-cloud-hover:
+    backgroundColor: "{colors.cloud}"
+    textColor: "{colors.night}"
+  button-night-solid:
+    backgroundColor: "{colors.night}"
+    textColor: "{colors.cloud}"
+    typography: "{typography.button}"
+    rounded: "{rounded.pill}"
+    padding: "0.8rem 1.75rem"
+    height: "3rem"
+  chip-status:
+    backgroundColor: "{colors.cloud}"
+    textColor: "{colors.night}"
+    typography: "{typography.label}"
+    rounded: "{rounded.pill}"
+    padding: "0.5rem 1rem"
+  photo:
+    backgroundColor: "{colors.concrete-deep}"
+    rounded: "{rounded.photo}"
+  band-ipe:
+    backgroundColor: "{colors.ipe-yellow}"
+    textColor: "{colors.night}"
+    rounded: "{rounded.photo}"
+    padding: "3rem"
   nav-bar:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-    height: "56px"
-  legend-row-active:
-    backgroundColor: "{colors.gold-soft}"
+    backgroundColor: "{colors.sky-afternoon}"
+    textColor: "{colors.cloud}"
+    height: "4rem"
 ---
 
 # Design System: ARES Rovers UnB
 
 ## Overview
 
-**Creative North Star: "A Prancha na Bancada"**
+**Creative North Star: "O Céu de Brasília"**
 
-O rover da ARES ainda está na bancada, então o site é o jogo de folhas do projeto: cada seção é uma prancha de desenho técnico numerada (Folha 01/06 a 06/06), com margem em traço grosso, zonas A–F e 1–8 nas bordas, etiqueta de folha no canto inferior direito e, quando cabe, o carimbo roxo da equipe. O papel é frio e milimetrado; tudo é desenhado a nanquim em dois pesos de traço; as fotos reais do rover entram como janelas de vista recortadas na folha.
+A página é o céu do Plano Piloto. Campos inteiros do roxo da equipe ocupam a página de borda a borda e se alternam com o concreto claro da cidade modernista; o dia passa ao longo da rolagem em estações fixas (meio-dia no início, tarde na equipe, entardecer roxo no contato), sem nenhuma animação ligada ao scroll. As duas cores do ipê são as duas cores do logo: o roxo é o próprio céu, do meio-dia claro ao entardecer quase noite, e o amarelo é a floração que só aparece onde há ação.
 
-A densidade é de prancha, não de landing page: blocos separados por traços de 2px que dividem a folha em células, títulos em letreiro expandido, rótulos de cota em caixa alta pequena. A cor é quase toda neutra; o dourado aparece apenas onde há uma ação ou uma marca de revisão, e o roxo apenas no carimbo e na marca. A recusa central, confirmada no contrato de direção, é o padrão da categoria: página preta espacial com brilho e cards.
-
-O movimento é de desenho: na Folha 01 as linhas de chamada se traçam da borda da foto até a peça, o balão surge quando a linha parte e o ponto quando ela chega. Fora disso, só respostas de estado curtas.
+A densidade é baixa e generosa: títulos enormes em Unbounded, texto corrido em Figtree com medida curta, fotos reais da equipe e do rover em cantos largos de Niemeyer. O hero abre com "ARES" gigante sobre o céu, e a foto da equipe sobe como horizonte, com o céu da foto dissolvendo por máscara no céu da página. A página recusa o preto espacial e o branco corporativo.
 
 **Key Characteristics:**
-- Cada seção é uma folha (`Sheet`) com margem de 2px, zonas nas bordas e etiqueta "Folha NN/06".
-- Papel frio com malha milimetrada (8px fina, 40px grossa) como fundo do `body`.
-- Nanquim em dois pesos: 2px para margens e divisões de célula, 1.5px para botões, janelas e balões; 1px em `line` para linhas de tabela.
-- Uma única família, Archivo, variando o eixo `wdth` (100 texto, 112 rótulos e botões, 125 letreiro).
-- Cantos retos em tudo, exceto o balão de peça, que é círculo por convenção de desenho técnico.
-- Fotos reais do rover e da equipe em janelas de vista com cantoneiras.
+- O céu é superfície, não fundo decorativo: cada estação é um gradiente vertical de borda a borda.
+- Concreto claro alterna com o céu; nunca dois campos de céu seguidos.
+- Ipê amarelo apenas em ações e no foco.
+- Curvas generosas: pílulas nos botões, 2rem nas fotos e na faixa de ipê.
+- Movimento de entrada único: o horizonte sobe uma vez; hover é discreto.
 
 ## Colors
 
-Paleta de prancha: papel e nanquim fazem quase tudo; dourado e roxo são as duas cores da marca, cada uma com um único papel.
+Um céu inteiro no roxo da equipe, escurecendo ao longo do dia, sobre concreto frio, com uma tinta azul-noite e um único amarelo de ação.
 
 ### Primary
-- **Dourado de Ação** (`gold`): fundo do botão de ação ("Quero patrocinar", "Patrocinar"), balão ativo, triângulo de revisão no carimbo e seleção de texto. Hover do botão em **Dourado Aceso** (`gold-hover`).
-- **Dourado Pálido de Revisão** (`gold-soft`): realce de estado ligado à ação ou à revisão: linha ativa da lista de peças, linha de subsistema alvo de âncora (`:target`), painel que envolve o convite de patrocínio, preenchimento do triângulo de revisão.
+- **Ipê Roxo ao Meio-Dia** (sky-noon): o roxo do logo e o primeiro campo da página (hero), gradiente de sky-noon-deep no topo para um lilás mais claro (#6a3fb0) no horizonte. Também a cor do caret, do accent-color e do ponto do chip de status.
+- **Ipê Roxo Profundo** (sky-noon-deep): topo do gradiente do meio-dia e polegar da barra de rolagem.
+- **Ipê Roxo à Tarde** (sky-afternoon): a seção da equipe, a barra de navegação quando sólida (95% de opacidade com desfoque) e o menu mobile; o gradiente desce para #2c105f.
+- **Entardecer Roxo** (sky-dusk / sky-dusk-deep): o último campo da página (contato e rodapé), descendo até quase noite (sky-dusk-deep).
 
-### Secondary
-- **Roxo Carimbo** (`purple`): fundo do carimbo (bloco de título com Equipe, Instituição, Revisão) e do grande carimbo de contato; também anel de foco, `accent-color` e cursor de texto.
-- **Lavanda de Carimbo** (`purple-ink`): rótulos e divisões dentro do roxo (a 80% e 40% de opacidade), borda do botão de traço claro.
+O roxo aparece sempre como céu: nunca como cor de texto, botão ou divisória.
+
+### Tertiary
+- **Ipê Amarelo** (ipe-yellow; hover ipe-yellow-hover): botões de ação principais ("Quero patrocinar", "Patrocinar"), a faixa "Seja o primeiro", o anel de foco e a seleção de texto. É o dourado da marca.
 
 ### Neutral
-- **Papel Frio** (`paper`): fundo da página, do nav e dos balões; cantoneiras das janelas de vista.
-- **Papel Fundo** (`paper-deep`): fundo de janela de vista enquanto a foto carrega, item de nav ativo e hover.
-- **Nanquim** (`ink`): todo texto principal, todas as margens e traços, linhas de chamada.
-- **Nanquim Diluído** (`ink-soft`): parágrafos de apoio, rótulos de cota, zonas da margem, numeração do nav.
-- **Grafite** (`line`): linhas finas de tabela e listas, divisões do nav, barra de rolagem.
+- **Concreto** (concrete): fundo do corpo e das seções claras (Sobre, Patrocínio).
+- **Concreto Sombreado** (concrete-deep): a seção do rover e o preenchimento das fotos enquanto carregam.
+- **Azul-Noite** (night): toda a tinta sobre concreto e sobre ipê; preenchimento do botão dentro da faixa de ipê.
+- **Noite Diluída** (night-soft): texto corrido secundário, rótulos e siglas sobre concreto.
+- **Fio** (rule): divisórias finas de 1px entre listas sobre concreto; sobre concreto-deep usa-se night a 20%, e sobre céu, branco a 20–25%.
+- **Nuvem** (cloud): toda a tinta sobre céu; texto corrido sobre céu fica em branco a 85%, rótulos a 70%, rodapé a 60%.
 
 ### Named Rules
-**The Gold Is Action Rule.** O dourado só marca o que se clica para agir (patrocinar) ou o que está em revisão. Nunca como decoração, faixa de seção, título ou ícone solto.
+**A Regra da Floração.** Ipê amarelo só marca ação ou foco: botão principal, a faixa de convite ao patrocínio, `:focus-visible` e `::selection`. Nunca em títulos, ícones, divisórias ou fundos de seção.
 
-**The Purple Is Stamp Rule.** O roxo só aparece no carimbo, no bloco de contato que é um carimbo ampliado e nos sinais do sistema (foco, caret). Nunca como fundo de seção inteira ou cor de texto corrido.
+**A Regra das Estações.** O céu muda em estações fixas, do roxo mais claro ao mais escuro, na ordem meio-dia, tarde, entardecer, separadas por campos de concreto. Uma nova seção escolhe uma estação já existente na posição certa do dia; nunca uma animação de cor ligada ao scroll.
 
 ## Typography
 
-**Display Font:** Archivo (com system-ui, sans-serif), eixo `wdth` 125
-**Body Font:** Archivo (com system-ui, sans-serif), eixo `wdth` 100
-**Label Font:** Archivo, eixo `wdth` 112
+**Display Font:** Unbounded (com system-ui, sans-serif), via next/font, variável `--font-display`
+**Body Font:** Figtree (com system-ui, sans-serif), via next/font, variável `--font-body`
 
-**Character:** Uma família só, como numa prancha onde título, cota e carimbo saem do mesmo normógrafo. A hierarquia vem da largura e do peso, não da troca de fonte.
+**Character:** Unbounded é larga e geométrica, com a mesma curva cheia das pílulas e do concreto de Niemeyer; Figtree é uma sans humanista e clara que deixa o texto leve sob títulos pesados.
 
 ### Hierarchy
-- **Display** (800, `clamp(5rem,13vw,11rem)`, 0.92, caixa alta, `wdth` 125): só o "ARES" da Folha 01; a linha "Rovers UnB" abaixo usa a mesma classe em `clamp(1.75rem,4vw,3.5rem)`.
-- **Headline** (800, `clamp(2.25rem,5vw,4.25rem)`, 0.92, caixa alta, `wdth` 125): título de cada folha. Contato sobe para `clamp(2.5rem,6vw,5rem)`.
-- **Title** (700, 1.125rem): títulos de item em listas (benefícios, subsistemas).
-- **Body** (400, 1.125rem, 1.625): parágrafo de apoio em `ink-soft`, limitado a 44–56ch. Texto de lista em 1rem.
-- **Label** (600, 0.6875rem, 0.08em, caixa alta, `wdth` 112): rótulos de cota, campos do carimbo, zonas da margem, cabeçalho da lista de peças, etiqueta de folha.
+- **Display** (700, clamp(5.5rem, 19vw, 16rem), 0.95, -0.03em): apenas "ARES" no hero, em branco sobre o céu.
+- **Display pequeno** (700, clamp(3rem, 8vw, 6rem), 0.95): o título de fechamento no entardecer ("Fale com a equipe").
+- **Headline** (600, clamp(2.25rem, 5vw, 4rem), 1.05, -0.025em): títulos de seção. A mesma classe em 1.75–2.75rem na faixa de ipê e em 1.5rem nos números de fatos.
+- **Title** (600, 1.125–1.25rem, Unbounded): nomes de áreas e benefícios em listas.
+- **Body lead** (400, 1.25–1.5rem, leading-snug): a linha de função do hero e o parágrafo do contato; máx. 34–48ch.
+- **Body** (400, 1.125rem, 1.625): texto corrido, máx. 52–60ch.
+- **Label** (600, 0.875rem, sem caixa alta): rótulos de fatos, siglas, chip de status.
 
 ### Named Rules
-**The One Family Rule.** Toda tipografia é Archivo; varia-se `wdth` e peso. Não se introduz segunda família, serifada ou monoespaçada.
+**A Regra do Título Equilibrado.** h1–h3 usam `text-wrap: balance`, parágrafos `text-wrap: pretty`. Títulos sempre em Unbounded; Unbounded nunca em texto corrido.
 
-**The Label Is A Field Rule.** O rótulo de cota nomeia um campo ou uma tabela (Equipe, Revisão, Folha, Lista de peças). Não vira sobretítulo acima de um headline.
+**A Regra da Caixa Natural.** Rótulos ficam em caixa normal, peso 600, sem tracking aberto; não há sobrancelhas nem kickers acima dos títulos.
 
 ## Layout
 
-Cada seção é uma `Sheet`: um respiro de 8px (16px a partir de `sm`) entre a borda da tela e a margem de 2px, dentro da qual o conteúdo se divide em células de uma grade de 12 colunas em `lg`, tipicamente 6/6 ou 5/7 ou 7/5. As células são separadas por traços de 2px em `ink` (`border-t-2` no celular, `border-l-2` no desktop), não por espaço vazio. O padding de célula é 24px, 40px em `sm`, 48px em `lg`.
+Contêiner central de 80rem (`max-w-7xl`) com respiro lateral de 1.5rem no mobile e 2.5rem a partir de 1024px. As seções têm 6rem de respiro vertical (8rem a partir de 640px). Em desktop o conteúdo usa uma grade de 12 colunas com espaço de 4rem: texto em 7 colunas e foto em 5 (ou 5/7 na seção do rover, e a equipe inverte a ordem com a foto à esquerda). No mobile tudo empilha em uma coluna com 3.5rem entre blocos.
 
-As zonas da margem (1–8 no topo, A–F à esquerda) só aparecem em `lg`. A Folha 01 ocupa a altura da viewport menos nav e etiqueta. O nav é fixo, 56px, e as âncoras compensam com `scroll-margin-top: 3.5rem`. No celular as células empilham, a janela de vista do rover vem logo depois das ações, e o carimbo quebra para linha inteira acima da etiqueta.
+O hero ocupa `100dvh`: título e ações no terço superior, a foto da equipe como horizonte no pé (46–50vh no mobile em fluxo; 66vh e absoluta atrás do texto a partir de 1024px). Âncoras de seção compensam a barra fixa com `scroll-margin-top: 4rem`.
 
 ## Elevation & Depth
 
-O sistema é plano: profundidade vem de traço, não de sombra. Folhas, células, carimbos e janelas ficam no plano do papel. A única sombra é uma resposta de estado do botão.
+O sistema é chapado: a profundidade vem dos campos de cor e dos gradientes verticais de céu, não de sombras. A única sombra é a do botão de ipê, uma sombra azul-noite difusa e deslocada para baixo, que sugere a floração pousada sobre o céu. A barra de navegação ganha `backdrop-filter: blur` quando sólida. O texto do hero leva uma sombra suave azul-noite (`0 1px 14px rgb(20 33 61 / 0.6)`) para manter a leitura sobre o céu da foto.
 
 ### Shadow Vocabulary
-- **Levantar do botão** (`box-shadow: 0 6px 14px -8px rgb(21 23 26 / 0.45)`): só no hover de `.btn`, junto de `translateY(-2px)`; some no `:active`.
-- **Sublinhado do nav ativo** (`box-shadow: inset 0 -3px 0 var(--ink)`): marca a seção atual no nav; é traço, não elevação.
+- **Floração** (`0 8px 20px -10px rgb(20 33 61 / 0.55)`; hover `0 12px 26px -12px rgb(20 33 61 / 0.6)`): apenas no botão de ipê.
 
 ### Named Rules
-**The Flat Sheet Rule.** Nada repousa com sombra. Se algo precisa se destacar, ganha um traço ou uma célula própria.
+**A Regra do Céu Chapado.** Cartões, fotos e faixas não têm sombra. Se algo precisa se destacar, muda de campo de cor.
 
 ## Shapes
 
-Cantos retos (0px) em folhas, células, botões, carimbos, janelas e nav. A única curva é o balão de peça (círculo), porque é assim que um balão de lista de peças se desenha. Janelas de vista levam cantoneiras de 14px em traço de 2px na cor do papel, no canto superior esquerdo e inferior direito. Marca de revisão é um triângulo de traço.
+Curvas de Niemeyer: tudo que é clicável é pílula completa (9999px); fotos e a faixa de ipê têm cantos largos de 2rem; o anel de foco arredonda em 6px. Divisórias são fios retos de 1px que organizam listas (fatos, áreas, benefícios, canais). O horizonte do hero não tem borda: a foto se dissolve no céu por uma máscara de gradiente (transparente no topo, opaca a partir de ~44–55%).
 
 ## Components
 
 ### Buttons
-Retângulos de traço, firmes e técnicos.
-- **Shape:** cantos retos (0px), borda de 1.5px em `ink`, altura mínima 48px, padding 12px 24px; rótulo em caixa alta, 700, `wdth` 112, 0.04em.
-- **Ação:** fundo `gold`, texto `ink`. Só para patrocinar.
-- **Traço:** fundo transparente, texto `ink`; no hover inverte para `ink` com texto `paper`.
-- **Traço claro:** sobre roxo, borda `purple-ink`, texto branco; hover branco com texto `purple`.
-- **Hover / Active:** sobe 2px com a sombra de levantar (220ms, `--ease-out-expo`); no `:active` volta e escala 0.985 em 80ms.
+Pílulas firmes e quentes, sempre em Figtree 700.
+- **Shape:** pílula completa (9999px), altura mínima 3rem, padding 0.8rem 1.75rem; na barra de navegação, altura 2.5rem.
+- **Ipê (principal):** ipe-yellow com tinta night e a sombra Floração. Hover clareia para ipe-yellow-hover, sobe 2px e alonga a sombra. É o único botão de patrocínio.
+- **Nuvem (secundário sobre céu):** contorno branco a 70% de 1.5px, texto branco; hover preenche de branco com tinta night.
+- **Noite sólido:** dentro da faixa de ipê, onde o amarelo já é o fundo, o botão vira night com texto branco.
+- **Estados:** hover sobe 2px (220ms, ease-out-expo); active volta e encolhe para 0.98 em 80ms; foco é o anel de ipê de 3px com 3px de afastamento.
+
+### Chips
+- **Status:** pílula branca, label 600 0.875rem, com ponto de 8px em sky-noon ("Em desenvolvimento"). Informativo, não clicável.
+
+### Cards / Containers
+- **Foto:** cantos de 2rem, `overflow: hidden`, preenchimento concrete-deep (branco a 10% sobre céu); a imagem dá zoom de 1.025 em 800ms no hover. Proporções verticais (4/5, 3/4, 1/2) ou 4/3. Quando a foto real traz ruído ao redor do assunto, o enquadramento é feito com `object-position` mais `scale`/`transform-origin` na própria imagem (ex.: o chassi na foto de patrocínio, a placa do campus cortada do horizonte), nunca trocando por foto de banco.
+- **Faixa de ipê ("Seja o primeiro"):** bloco ipe-yellow, cantos de 2rem, padding 2rem (3rem a partir de 640px), headline + parágrafo à esquerda e botão noite sólido à direita. É o único bloco amarelo da página.
+- **Listas com fio:** fatos, áreas e benefícios não viram cartões; são linhas separadas por fios de 1px.
 
 ### Navigation
-Barra fixa de 56px em `paper`, borda inferior de 2px. Marca à esquerda numa célula própria (logo em `mix-blend-multiply` + "ARES" em letreiro). Links em células separadas por `line`, cada um numerado 01–06 em `ink-soft` tabular; ativo em `paper-deep` com sublinhado interno de 3px. Botão de ação "Patrocinar" na célula da direita. No celular, botão de menu de duas barras que viram X e um painel de tela cheia com a mesma numeração e o botão de ação em largura total.
-
-### Folha (Sheet)
-Contêiner de cada seção. Margem de 2px em `ink`, zonas na borda em `lg`, e no rodapé a etiqueta: campos opcionais de carimbo, título da folha em rótulo, e "Folha NN/06" em tabular. É o componente que define o mundo; toda seção nova entra numa folha nova com número próprio.
-
-### Carimbo (bloco de título)
-Faixa roxa com campos rótulo/valor separados por traços de 2px em `purple-ink` a 40%: Equipe, Instituição, Revisão (com triângulo dourado). Em Contato, o carimbo cresce e vira a superfície de contato, com e-mail em `link-draw`.
-
-### Janela de vista
-Foto real recortada com borda de 1.5px, fundo `paper-deep` e cantoneiras. No hover a foto aproxima 2.5% em 700ms.
-
-### Balão de peça e lista de peças (assinatura)
-Balões numerados (36px, 44px em `lg`) presos à borda da foto com um ombro de traço e uma linha de chamada SVG até um ponto na peça. Passar o mouse ou focar num balão acende o balão em `gold` e a linha correspondente da lista de peças em `gold-soft`, e vice-versa. Na entrada, a linha se desenha (650ms), o balão surge (450ms) e o ponto aparece, escalonados em 120ms por peça.
+- **Barra:** fixa, 4rem de altura, transparente sobre o hero e sky-afternoon a 95% com desfoque depois de 24px de rolagem. Logo + "ARES" em Unbounded 700 à esquerda; links em pílula (Figtree 600, 0.9375rem, branco a 85%, hover fundo branco a 15%); botão de ipê "Patrocinar" à direita.
+- **Mobile:** botão de duas barras que viram X; painel em tela cheia sky-afternoon com links em Unbounded 600 1.5rem separados por fios brancos a 20% e o botão de ipê em largura total.
 
 ### Link desenhado
-Links de texto ganham um sublinhado de 1.5px que se traça da esquerda em 320ms no hover e no foco.
+Links de texto (e-mail, canais) recebem um sublinhado de 2px que se desenha da esquerda para a direita em 320ms no hover e no foco.
+
+### Horizonte do hero
+A foto real da equipe ocupa o pé do hero e sobe uma vez na entrada (48px, 1100ms, ease-out-expo, 120ms de atraso); o céu da foto se funde ao céu da página por máscara. O bloco de texto acima entra em cascata (16px, 800ms, atrasos de 0/90/180ms).
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** colocar toda seção nova numa `Sheet` com número de folha próprio e atualizar `TOTAL_FOLHAS`.
-- **Do** separar conteúdo por traços de 2px em `ink` entre células, com padding 24/40/48px.
-- **Do** usar o botão de ação dourado só para patrocinar; seguir/contatar usa botão de traço.
-- **Do** usar fotos reais do rover e da equipe em janelas de vista com cantoneiras.
-- **Do** variar `wdth` do Archivo (100/112/125) em vez de trocar de família.
-- **Do** respeitar `prefers-reduced-motion`: animações e transformações de hover zeradas.
+- **Do** alternar campos de céu (gradientes `.sky-noon`, `.sky-afternoon`, `.sky-dusk`) com concreto, na ordem do dia.
+- **Do** usar ipê amarelo só no botão principal, na faixa de convite, no foco e na seleção.
+- **Do** escrever sobre céu em branco (texto corrido a 85%) e sobre concreto em night / night-soft.
+- **Do** dar a toda foto real cantos de 2rem e a todo controle a forma de pílula.
+- **Do** manter a entrada única do horizonte e respeitar `prefers-reduced-motion`, que zera animações e o deslocamento de hover.
 
 ### Don't:
-- **Don't** usar fundo preto espacial, brilho, gradiente ou cards flutuantes; é o padrão da categoria que este mundo recusa.
-- **Don't** usar dourado como decoração, título, faixa ou ícone; ele é ação e revisão.
-- **Don't** usar roxo fora do carimbo, do bloco de contato e dos sinais de foco.
-- **Don't** arredondar cantos; só o balão de peça é circular.
-- **Don't** pôr sombra em repouso; a única sombra é o hover do botão.
-- **Don't** colocar rótulo de cota como sobretítulo acima de um headline.
+- **Don't** usar fundo preto espacial nem página corporativa toda branca.
+- **Don't** usar ipê amarelo em títulos, ícones, divisórias ou fundos de seção além da faixa de convite.
+- **Don't** colocar sombras em fotos, cartões ou faixas; a sombra Floração é só do botão de ipê.
+- **Don't** ligar a cor do céu ou qualquer animação à posição do scroll.
+- **Don't** apresentar a foto de banco do rover como o rover da ARES; só fotos reais da equipe e do rover.
