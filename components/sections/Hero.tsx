@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import equipeImg from "@/public/equipe.jpg";
-import { INSTAGRAM, MAILTO_PATROCINIO } from "../../dados";
+import equipeImg from "@/public/fotos/equipe.jpg";
+import { INSTAGRAM, MAILTO_PATROCINIO } from "@/content/site";
 
 export default function Hero() {
   return (

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import emUsoImg from "@/public/fotos/rover-em-uso.jpg";
-import { INSTAGRAM, LINKEDIN } from "../../dados";
+import { INSTAGRAM, LINKEDIN } from "@/content/site";
 
 export default function Equipe() {
   return (

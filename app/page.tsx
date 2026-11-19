@@ -1,9 +1,9 @@
-import Hero from "./components/pages/hero/Hero";
-import Sobre from "./components/pages/sobre/Sobre";
-import Projetos from "./components/pages/projetos/Projetos";
-import Equipe from "./components/pages/equipe/Equipe";
-import Patrocinadores from "./components/pages/patrocinadores/Patrocinadores";
-import Contato from "./components/pages/contato/Contato";
+import Hero from "@/components/sections/Hero";
+import Sobre from "@/components/sections/Sobre";
+import Projetos from "@/components/sections/Projetos";
+import Equipe from "@/components/sections/Equipe";
+import Patrocinadores from "@/components/sections/Patrocinadores";
+import Contato from "@/components/sections/Contato";
 
 export default function Home() {
   return (

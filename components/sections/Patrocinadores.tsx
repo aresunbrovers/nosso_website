@@ -1,6 +1,6 @@
 import Image from "next/image";
 import oficinaImg from "@/public/fotos/chassi-oficina.jpg";
-import { MAILTO_PATROCINIO } from "../../dados";
+import { MAILTO_PATROCINIO } from "@/content/site";
 
 const beneficios = [
   {

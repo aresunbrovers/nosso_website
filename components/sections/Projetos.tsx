@@ -1,7 +1,7 @@
 import Image from "next/image";
 import roverImg from "@/public/fotos/rover-bancada.jpg";
 import chassiImg from "@/public/fotos/chassi-bancada.jpg";
-import { subsistemas } from "../../dados";
+import { subsistemas } from "@/content/site";
 
 export default function Projetos() {
   return (

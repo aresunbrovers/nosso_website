@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import logoImg from "@/public/Logo_dourada_roxa_dark.png";
+import logoImg from "@/public/brand/Logo_dourada_roxa_dark.png";
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
