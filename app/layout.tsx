@@ -9,7 +9,7 @@ const archivo = Archivo({
   axes: ["wdth"],
 });
 
-const siteUrl = "https://blazemorales.github.io/ARES_ROVERS_UNB_WEBSITE";
+const siteUrl = "https://aresunbrovers.vercel.app";
 const ogImage = `${siteUrl}/brand/Logo_dourada_roxa.png`;
 const description =
   "Equipe oficial de Rovers da Universidade de Brasília, vinculada à Engenharia Aeroespacial da UnB. Desenvolvemos veículos robóticos para exploração planetária.";

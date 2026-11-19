@@ -7,7 +7,7 @@ export type Subsistema = {
   sigla: string;
   nome: string;
   descricao: string;
-  // sigla/descrição ainda a confirmar com a equipe
+  // descrição ainda a confirmar com a equipe
   provisorio?: boolean;
 };
 
@@ -37,7 +37,7 @@ export const subsistemas: Subsistema[] = [
       "Chassi e sistemas mecânicos projetados para terrenos irregulares análogos a superfícies planetárias.",
   },
   {
-    sigla: "BRA",
+    sigla: "BR",
     nome: "Braço Robótico",
     descricao: "Projetar e construir o braço robótico do rover.",
     provisorio: true,
