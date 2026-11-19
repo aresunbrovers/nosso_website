@@ -7,7 +7,7 @@ import Contato from "./components/pages/contato/Contato";
 
 export default function Home() {
   return (
-    <main className="flex-1 pt-14">
+    <main className="flex-1">
       <Hero />
       <Sobre />
       <Projetos />

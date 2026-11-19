@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Archivo } from "next/font/google";
+import { Figtree, Unbounded } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
-const archivo = Archivo({
-  variable: "--font-archivo",
+const unbounded = Unbounded({
+  variable: "--font-display",
   subsets: ["latin"],
-  axes: ["wdth"],
+});
+
+const figtree = Figtree({
+  variable: "--font-body",
+  subsets: ["latin"],
 });
 
 const siteUrl = "https://blazemorales.github.io/ARES_ROVERS_UNB_WEBSITE";
@@ -62,7 +66,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${archivo.variable} h-full antialiased`}
+      className={`${unbounded.variable} ${figtree.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <Navbar />

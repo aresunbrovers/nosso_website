@@ -1,62 +1,67 @@
 @import "tailwindcss";
 
-/* Mundo: prancha de desenho técnico.
-   Papel frio + malha milimetrada, nanquim em dois pesos, carimbo roxo da marca.
-   Lei de paleta: dourado só para ação e revisão; roxo só para o carimbo e a marca. */
+/* Mundo: céu de Brasília.
+   O céu é o chão da página e muda ao longo do dia (meio-dia, tarde, entardecer).
+   Ipê amarelo só para ação; ipê roxo é o entardecer e a marca. */
 :root {
-  --paper: #f4f5f2;
-  --paper-deep: #e9ebe6;
-  --ink: #15171a;
-  --ink-soft: #4a4e55;
-  --line: #c9ccc5;
-  --purple: #4c1d95;
-  --purple-ink: #ece6f7;
-  --gold: #d4a017;
-  --gold-soft: #f3e2a8;
+  /* roxo da equipe (#4c1d95), o ipê roxo de Brasília, em três horas do dia */
+  --sky-noon: #4c1d95;
+  --sky-noon-deep: #3f1782;
+  --sky-afternoon: #3a1478;
+  --sky-dusk: #2a0f5c;
+  --sky-dusk-deep: #170838;
+  --concrete: #f1f2ef;
+  --concrete-deep: #e3e5e0;
+  --night: #14213d;
+  --night-soft: #45506a;
+  --rule: #c9cdd3;
+  --ipe-yellow: #d4a017;
+  --ipe-yellow-hover: #e6b52a;
+  --cloud: #ffffff;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @theme inline {
-  --color-paper: var(--paper);
-  --color-paper-deep: var(--paper-deep);
-  --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-line: var(--line);
-  --color-purple: var(--purple);
-  --color-purple-ink: var(--purple-ink);
-  --color-gold: var(--gold);
-  --color-gold-soft: var(--gold-soft);
-  --font-sans: var(--font-archivo);
+  --color-sky-noon: var(--sky-noon);
+  --color-sky-afternoon: var(--sky-afternoon);
+  --color-sky-dusk: var(--sky-dusk);
+  --color-sky-dusk-deep: var(--sky-dusk-deep);
+  --color-concrete: var(--concrete);
+  --color-concrete-deep: var(--concrete-deep);
+  --color-night: var(--night);
+  --color-night-soft: var(--night-soft);
+  --color-rule: var(--rule);
+  --color-ipe: var(--ipe-yellow);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
 }
 
 html {
   scroll-behavior: smooth;
-  scrollbar-color: var(--line) var(--paper);
-  accent-color: var(--purple);
-  caret-color: var(--purple);
+  scrollbar-color: var(--sky-noon-deep) var(--concrete);
+  accent-color: var(--sky-noon);
+  caret-color: var(--sky-noon);
 }
 
 body {
-  background-color: var(--paper);
-  /* malha milimetrada: 8px fina, 40px grossa (um único tile SVG, leve para rolar) */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M8 0V40M16 0V40M24 0V40M32 0V40M0 8H40M0 16H40M0 24H40M0 32H40' stroke='%2315171a' stroke-opacity='.045'/%3E%3Cpath d='M0 .5H40M.5 0V40' stroke='%2315171a' stroke-opacity='.075'/%3E%3C/svg%3E");
-  color: var(--ink);
-  font-family: var(--font-archivo), system-ui, sans-serif;
-  font-variation-settings: "wdth" 100;
+  background: var(--concrete);
+  color: var(--night);
+  font-family: var(--font-body), system-ui, sans-serif;
 }
 
 section[id] {
-  scroll-margin-top: 3.5rem;
+  scroll-margin-top: 4rem;
 }
 
 ::selection {
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--ipe-yellow);
+  color: var(--night);
 }
 
 :focus-visible {
-  outline: 2px solid var(--purple);
+  outline: 3px solid var(--ipe-yellow);
   outline-offset: 3px;
+  border-radius: 6px;
 }
 
 h1,
@@ -70,260 +75,146 @@ p {
 }
 
 @layer components {
-  /* Letreiro técnico: Archivo expandido, caixa alta */
-  .lettering {
-    font-variation-settings: "wdth" 125;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: -0.01em;
-    line-height: 0.92;
+  .display {
+    font-family: var(--font-display), system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
   }
 
-  /* Rótulo de cota / campo de carimbo */
-  .field-label {
-    font-variation-settings: "wdth" 112;
-    font-size: 0.6875rem;
+  .headline {
+    font-family: var(--font-display), system-ui, sans-serif;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    line-height: 1;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
   }
 
-  /* Botões: retângulos de traço, cantos retos */
+  /* Céus: cada estação do dia é um campo de cor inteiro */
+  .sky-noon {
+    background: linear-gradient(180deg, var(--sky-noon-deep) 0%, var(--sky-noon) 55%, #6a3fb0 100%);
+    color: var(--cloud);
+  }
+  /* tarde: o roxo escurecendo em direção ao entardecer */
+  .sky-afternoon {
+    background: linear-gradient(180deg, var(--sky-afternoon) 0%, #33126d 60%, #2c105f 100%);
+    color: var(--cloud);
+  }
+  .sky-dusk {
+    background: linear-gradient(180deg, #2c105f 0%, var(--sky-dusk) 45%, var(--sky-dusk-deep) 100%);
+    color: var(--cloud);
+  }
+
+  /* Botões em pílula: curva de Niemeyer */
   .btn {
     display: inline-flex;
     min-height: 3rem;
     align-items: center;
     justify-content: center;
-    gap: 0.625rem;
-    border: 1.5px solid var(--ink);
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9375rem;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.8rem 1.75rem;
+    font-size: 1rem;
     font-weight: 700;
-    font-variation-settings: "wdth" 112;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
     transition:
       transform 220ms var(--ease-out-expo),
       background-color 180ms ease,
       color 180ms ease,
+      border-color 180ms ease,
       box-shadow 220ms var(--ease-out-expo);
   }
   .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 14px -8px rgb(21 23 26 / 0.45);
   }
   .btn:active {
-    transform: translateY(0) scale(0.985);
-    box-shadow: none;
+    transform: translateY(0) scale(0.98);
     transition-duration: 80ms;
   }
-  .btn-action {
-    background: var(--gold);
-    color: var(--ink);
+  .btn-ipe {
+    background: var(--ipe-yellow);
+    color: var(--night);
+    box-shadow: 0 8px 20px -10px rgb(20 33 61 / 0.55);
   }
-  .btn-action:hover {
-    background: #e0ae24;
+  .btn-ipe:hover {
+    background: var(--ipe-yellow-hover);
+    box-shadow: 0 12px 26px -12px rgb(20 33 61 / 0.6);
   }
-  .btn-line {
-    background: transparent;
-    color: var(--ink);
+  .btn-cloud {
+    border: 1.5px solid rgb(255 255 255 / 0.7);
+    color: var(--cloud);
   }
-  .btn-line:hover {
-    background: var(--ink);
-    color: var(--paper);
+  .btn-cloud:hover {
+    background: var(--cloud);
+    border-color: var(--cloud);
+    color: var(--night);
   }
-  .btn-line-light {
-    border-color: var(--purple-ink);
-    color: #fff;
+  .btn-night {
+    border: 1.5px solid var(--night);
+    color: var(--night);
   }
-  .btn-line-light:hover {
-    background: #fff;
-    color: var(--purple);
+  .btn-night:hover {
+    background: var(--night);
+    color: var(--concrete);
   }
 
   .link-draw {
     background-image: linear-gradient(currentColor, currentColor);
-    background-size: 0% 1.5px;
+    background-size: 0% 2px;
     background-position: 0 100%;
     background-repeat: no-repeat;
     transition: background-size 320ms var(--ease-out-expo);
   }
   .link-draw:hover,
   .link-draw:focus-visible {
-    background-size: 100% 1.5px;
+    background-size: 100% 2px;
   }
 
-  /* Janela de vista: foto recortada na folha, com cantoneiras */
-  .view {
+  /* Foto com curva generosa; zoom leve no hover */
+  .photo {
     position: relative;
     overflow: hidden;
-    border: 1.5px solid var(--ink);
-    background: var(--paper-deep);
+    border-radius: 2rem;
+    background: var(--concrete-deep);
   }
-  .view img {
-    transition: transform 700ms var(--ease-out-expo);
+  .photo img {
+    transition: transform 800ms var(--ease-out-expo);
   }
-  .view:hover img {
+  .photo:hover img {
     transform: scale(1.025);
   }
 }
 
-/* ----- Balões de peça (interação assinatura) ----- */
-.balloon {
-  --size: 2.25rem;
-  --off: 1.6rem;
-  position: absolute;
-  display: grid;
-  width: var(--size);
-  height: var(--size);
-  place-items: center;
-  border: 1.5px solid var(--ink);
-  border-radius: 9999px;
-  background: var(--paper);
-  color: var(--ink);
-  font-weight: 800;
-  font-size: 0.9375rem;
-  font-variation-settings: "wdth" 112;
-  transform: translate(-50%, -50%);
-  transition:
-    background-color 180ms ease,
-    transform 260ms var(--ease-out-expo);
-  z-index: 2;
-}
-@media (min-width: 1024px) {
-  .balloon {
-    --size: 2.75rem;
-    --off: 3rem;
-    font-size: 1rem;
-  }
-}
-.balloon[data-lado="e"] {
-  left: calc(-1 * var(--off));
-}
-.balloon[data-lado="d"] {
-  left: calc(100% + var(--off));
-}
-/* ombro da linha de chamada: do balão até a borda da foto */
-.balloon::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: calc(var(--off) - var(--size) / 2);
-  height: 1.5px;
-  background: var(--ink);
-  transform: translateY(-50%);
-}
-.balloon[data-lado="e"]::after {
-  left: 100%;
-}
-.balloon[data-lado="d"]::after {
-  right: 100%;
-}
-.balloon:hover,
-.balloon:focus-visible,
-.balloon[data-on="true"] {
-  background: var(--gold);
-  transform: translate(-50%, -50%) scale(1.08);
-}
-
-.leader {
-  stroke: var(--ink);
-  stroke-width: 0.3;
-  fill: none;
-}
-/* halo cor de papel sob a linha: lê sobre as partes escuras da foto */
-.leader-halo {
-  stroke: var(--paper);
-  stroke-width: 0.9;
-  stroke-linecap: round;
-  fill: none;
-}
-.leader-dot {
-  fill: var(--ink);
-  stroke: var(--paper);
-  stroke-width: 0.6;
-}
-
-.legend-row[data-on="true"] {
-  background: var(--gold-soft);
-}
-
-/* Cantoneiras nas janelas de vista */
-.view::before,
-.view::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  width: 14px;
-  height: 14px;
-  pointer-events: none;
-}
-.view::before {
-  top: 6px;
-  left: 6px;
-  border-top: 2px solid var(--paper);
-  border-left: 2px solid var(--paper);
-}
-.view::after {
-  right: 6px;
-  bottom: 6px;
-  border-right: 2px solid var(--paper);
-  border-bottom: 2px solid var(--paper);
-}
-
-/* Entrada da folha 01: cada linha se desenha da borda até a peça,
-   o balão aparece quando a linha começa e o ponto quando ela chega */
-@keyframes draw {
-  from {
-    stroke-dashoffset: 1;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes pop {
+/* O horizonte sobe uma vez na entrada */
+@keyframes horizon {
   from {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.6);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-}
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(48px);
   }
   to {
     opacity: 1;
     transform: none;
   }
 }
-
-.enter-rise {
-  animation: rise 800ms var(--ease-out-expo) both;
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
-.enter-draw .balloon {
-  animation: pop 450ms var(--ease-out-expo) backwards;
-  animation-delay: calc(250ms + var(--i, 0) * 120ms);
+.enter-horizon {
+  animation: horizon 1100ms var(--ease-out-expo) 120ms backwards;
 }
-.enter-draw .leader,
-.enter-draw .leader-halo {
-  stroke-dasharray: 1;
-  animation: draw 650ms var(--ease-out-expo) backwards;
-  animation-delay: calc(400ms + var(--i, 0) * 120ms);
+.enter-rise > * {
+  animation: rise 800ms var(--ease-out-expo) backwards;
 }
-.enter-draw .leader-dot {
-  animation: fade 300ms ease-out backwards;
-  animation-delay: calc(850ms + var(--i, 0) * 120ms);
+.enter-rise > *:nth-child(2) {
+  animation-delay: 90ms;
+}
+.enter-rise > *:nth-child(3) {
+  animation-delay: 180ms;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -338,7 +229,7 @@ p {
     transition-duration: 0.01ms !important;
   }
   .btn:hover,
-  .view:hover img {
+  .photo:hover img {
     transform: none;
   }
 }

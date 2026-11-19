@@ -1,22 +1,21 @@
 import Image from "next/image";
 import exposicaoImg from "@/public/fotos/rover-exposicao.jpg";
-import Sheet from "../../Sheet";
 
 const fatos = [
-  { campo: "Áreas", valor: "7 · cinco de engenharia, duas de gestão" },
-  { campo: "Membros", valor: "30+ estudantes" },
-  { campo: "Faculdade", valor: "FCTE · UnB Gama" },
+  { campo: "Áreas", valor: "7", nota: "cinco de engenharia, duas de gestão" },
+  { campo: "Membros", valor: "30+", nota: "estudantes de várias engenharias" },
+  { campo: "Faculdade", valor: "FCTE", nota: "UnB, campus Gama" },
 ];
 
 export default function Sobre() {
   return (
-    <Sheet id="sobre" folha={2} titulo="Quem somos">
-      <div className="grid lg:grid-cols-12">
-        <div className="p-6 sm:p-10 lg:col-span-7 lg:p-12">
-          <h2 id="sobre-titulo" className="lettering text-[clamp(2.25rem,5vw,4.25rem)]">
+    <section id="sobre" aria-labelledby="sobre-titulo" className="py-24 sm:py-32">
+      <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-12 lg:gap-16 lg:px-10">
+        <div className="lg:col-span-7">
+          <h2 id="sobre-titulo" className="headline text-[clamp(2.25rem,5vw,4rem)]">
             Uma equipe de competição da UnB
           </h2>
-          <div className="mt-8 max-w-[62ch] space-y-4 text-lg leading-relaxed text-ink-soft">
+          <div className="mt-8 max-w-[60ch] space-y-4 text-lg leading-relaxed text-night-soft">
             <p>
               A ARES (Aerospace Rover Exploration System) é a equipe oficial de
               Rovers da Universidade de Brasília, vinculada à Engenharia
@@ -33,26 +32,24 @@ export default function Sobre() {
             </p>
           </div>
 
-          <dl className="mt-10 max-w-xl border-2 border-ink">
+          <dl className="mt-12 grid gap-6 border-t border-rule pt-8 sm:grid-cols-3">
             {fatos.map((f) => (
-              <div
-                key={f.campo}
-                className="grid grid-cols-[7.5rem_1fr] border-ink not-first:border-t"
-              >
-                <dt className="field-label flex items-center border-r border-ink px-4 py-3 text-ink-soft">
-                  {f.campo}
-                </dt>
-                <dd className="px-4 py-3 text-base font-semibold">{f.valor}</dd>
+              <div key={f.campo}>
+                <dt className="text-sm font-semibold text-night-soft">{f.campo}</dt>
+                <dd className="mt-1">
+                  <span className="headline block text-2xl">{f.valor}</span>
+                  <span className="mt-1 block text-sm text-night-soft">{f.nota}</span>
+                </dd>
               </div>
             ))}
           </dl>
         </div>
 
-        <div className="border-t-2 border-ink p-4 sm:p-8 lg:col-span-5 lg:border-l-2 lg:border-t-0">
-          <div className="view aspect-[4/5] w-full">
+        <div className="lg:col-span-5">
+          <div className="photo aspect-[4/5]">
             <Image
               src={exposicaoImg}
-              alt="Rover da ARES exposto numa mesa com a toalha da equipe, com o sensor no alto do mastro e o banner da equipe ao fundo"
+              alt="Rover da ARES exposto numa mesa com a toalha da equipe, com o sensor no alto do mastro"
               fill
               sizes="(min-width: 1024px) 38vw, 100vw"
               className="object-cover object-[50%_95%]"
@@ -60,6 +57,6 @@ export default function Sobre() {
           </div>
         </div>
       </div>
-    </Sheet>
+    </section>
   );
 }

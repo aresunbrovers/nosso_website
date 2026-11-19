@@ -1,105 +1,74 @@
 import Image from "next/image";
+import roverImg from "@/public/fotos/rover-bancada.jpg";
 import chassiImg from "@/public/fotos/chassi-bancada.jpg";
-import emUsoImg from "@/public/fotos/rover-em-uso.jpg";
-import Sheet from "../../Sheet";
 import { subsistemas } from "../../dados";
 
 export default function Projetos() {
   return (
-    <Sheet
-      id="projetos"
-      folha={3}
-      titulo="Lista de peças"
-      carimbo={
-        <div className="flex flex-col justify-center gap-1 px-4 py-2">
-          <span className="field-label text-ink-soft">Revisão</span>
-          <span className="flex items-center gap-2 text-sm font-bold">
-            <svg viewBox="0 0 12 11" aria-hidden="true" className="h-3 w-3">
-              <path d="M6 1 11 10H1z" fill="var(--gold-soft)" stroke="var(--ink)" strokeWidth="1.2" />
-            </svg>
-            Em desenvolvimento
-          </span>
-        </div>
-      }
-    >
-      <div className="grid lg:grid-cols-12">
-        <div className="p-6 sm:p-10 lg:col-span-6 lg:p-12">
-          <h2 id="projetos-titulo" className="lettering text-[clamp(2.25rem,5vw,4.25rem)]">
-            Nosso primeiro rover
-          </h2>
-          <p className="mt-8 max-w-[56ch] text-lg leading-relaxed text-ink-soft">
-            Estamos construindo nosso primeiro rover para competições nacionais
-            e internacionais. Um veículo robótico capaz de operar em terrenos
-            análogos a superfícies extraterrestres, integrando cinco subsistemas
-            de engenharia.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 gap-4 border-t-2 border-ink p-4 sm:gap-6 sm:p-8 lg:col-span-6 lg:border-l-2 lg:border-t-0">
-          <div className="view aspect-[3/4]">
-            <Image
-              src={chassiImg}
-              alt="Chassi do rover ainda sem rodas sobre a bancada, com perfis de alumínio e juntas impressas em 3D"
-              fill
-              sizes="(min-width: 1024px) 22vw, 45vw"
-              className="object-cover object-[50%_55%]"
-            />
+    <section id="projetos" aria-labelledby="projetos-titulo" className="bg-concrete-deep py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <h2 id="projetos-titulo" className="headline text-[clamp(2.25rem,5vw,4rem)]">
+              Nosso primeiro rover
+            </h2>
+            <p className="mt-8 max-w-[52ch] text-lg leading-relaxed text-night-soft">
+              Estamos construindo nosso primeiro rover para competições nacionais
+              e internacionais. Um veículo robótico capaz de operar em terrenos
+              análogos a superfícies extraterrestres, integrando cinco subsistemas
+              de engenharia.
+            </p>
+            <p className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold">
+              <span className="h-2 w-2 rounded-full bg-sky-noon" aria-hidden="true" />
+              Em desenvolvimento
+            </p>
           </div>
-          <div className="view aspect-[3/4]">
-            <Image
-              src={emUsoImg}
-              alt="Integrante da equipe conduzindo o rover de seis rodas pelo chão do laboratório"
-              fill
-              sizes="(min-width: 1024px) 22vw, 45vw"
-              className="object-cover object-[50%_45%]"
-            />
+
+          <div className="grid grid-cols-5 gap-4 lg:col-span-7">
+            <div className="photo col-span-3 aspect-[3/4]">
+              <Image
+                src={roverImg}
+                alt="Rover de seis rodas da ARES montado sobre uma bancada, com chassi de alumínio e peças impressas em 3D"
+                fill
+                sizes="(min-width: 1024px) 30vw, 60vw"
+                className="object-cover object-[50%_70%]"
+              />
+            </div>
+            <div className="photo col-span-2 aspect-[1/2]">
+              <Image
+                src={chassiImg}
+                alt="Chassi do rover ainda sem rodas sobre a bancada"
+                fill
+                sizes="(min-width: 1024px) 20vw, 40vw"
+                className="object-cover object-[50%_55%]"
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Lista de peças: um subsistema por linha */}
-      <div className="border-t-2 border-ink">
-        <div
-          aria-hidden="true"
-          className="hidden grid-cols-[4rem_5rem_16rem_1fr] border-b-2 border-ink bg-paper-deep md:grid"
-        >
-          {["Item", "Sigla", "Subsistema", "Função"].map((c) => (
-            <span key={c} className="field-label border-ink px-4 py-3 not-first:border-l">
-              {c}
-            </span>
-          ))}
-        </div>
-        <ol>
-          {subsistemas.map((s, i) => (
+        <ol className="mt-20 grid gap-x-12 border-t border-night/20 sm:grid-cols-2 lg:grid-cols-3">
+          {subsistemas.map((s) => (
             <li
               key={s.sigla}
               id={`peca-${s.sigla.toLowerCase()}`}
-              className="grid scroll-mt-20 grid-cols-[3rem_1fr] border-ink transition-colors not-last:border-b target:bg-gold-soft md:grid-cols-[4rem_5rem_16rem_1fr]"
+              className="scroll-mt-24 border-b border-night/20 py-7"
             >
-              <span className="row-span-3 px-4 py-4 font-bold tabular-nums md:row-span-1">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span className="px-4 pt-4 text-sm font-bold md:border-l md:border-ink md:py-4">
-                {s.sigla}
-              </span>
-              <h3 className="flex items-center gap-2 px-4 pt-1 text-base font-bold md:border-l md:border-ink md:py-4">
-                {s.nome}
-                {s.provisorio && (
-                  <span title="Revisão pendente" className="inline-flex items-center gap-1.5">
-                    <svg viewBox="0 0 12 11" aria-hidden="true" className="h-3 w-3 shrink-0">
-                      <path d="M6 1 11 10H1z" fill="var(--gold-soft)" stroke="var(--ink)" strokeWidth="1.2" />
-                    </svg>
-                    <span className="field-label text-ink-soft">Rev. pendente</span>
-                  </span>
-                )}
-              </h3>
-              <p className="px-4 pb-4 pt-1 text-[0.9375rem] leading-relaxed text-ink-soft md:border-l md:border-ink md:py-4">
+              <div className="flex items-baseline justify-between gap-4">
+                <h3 className="headline text-xl">{s.nome}</h3>
+                <span className="text-sm font-bold text-night-soft">{s.sigla}</span>
+              </div>
+              <p className="mt-3 text-base leading-relaxed text-night-soft">
                 {s.descricao}
               </p>
+              {s.provisorio && (
+                <p className="mt-2 text-sm font-semibold text-night-soft">
+                  Sigla e descrição a confirmar
+                </p>
+              )}
             </li>
           ))}
         </ol>
       </div>
-    </Sheet>
+    </section>
   );
 }
